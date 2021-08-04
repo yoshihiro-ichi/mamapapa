@@ -17,3 +17,7 @@ $ bundle install
 $ rails db:create && rails db:migrate  
 $ rails s`
 ```
+# カタログ設計
+[Google](https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing)
+# テーブル議定書
+[Google](https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing)
