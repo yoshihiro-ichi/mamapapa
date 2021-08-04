@@ -9,3 +9,9 @@
 - メッセージ機能
 # カリキュラム外の技術
 - ransack
+# 実行手段
+$ git clone git@github.com:yoshihiro-ichi/mamapapa.gitMamaPapa
+$ cd MamaPapa
+$ bundle install
+$ rails db:create && rails db:migrate
+$ rails s
