@@ -23,3 +23,5 @@ $ rails s`
 [https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit#gid=1110660072)
 # ワイヤーフレーム
 [https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
+# ER図
+!(/imege/スクリーンショット (72).png)
