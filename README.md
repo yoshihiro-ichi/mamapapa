@@ -24,4 +24,4 @@ $ rails s`
 # ワイヤーフレーム
 [https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
-![ER1](https://user-images.githubusercontent.com/83752978/128123394-0b4d540d-b7a3-4487-ac97-61eaf57a80c0.png)
+![ER1 (5)](https://user-images.githubusercontent.com/83752978/128124045-86bac95c-5c5a-4b02-b426-a6ac35e392d3.png)
