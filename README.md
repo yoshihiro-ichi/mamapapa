@@ -18,10 +18,11 @@ $ rails s`
 # カタログ設計
 [https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing)
 # テーブル議定書
-[https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/e/2PACX-1vTLdctwrm6vEngqQu0FptWpqlLHa7TMEEvyhAYHfcE4iAAyJNICZJpF4qaiTMWfbdokMYmkp532BRDr/pubhtml?gid=1110660072&single=tru)
+[https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/e/2PACX-1vTLdctwrm6vEngqQu0FptWpqlLHa7TMEEvyhAYHfcE4iAAyJNICZJpF4qaiTMWfbdokMYmkp532BRDr/pubhtml?gid=1110660072&single=true)
 # ワイヤーフレーム
 [https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
-![ER1 (5)](https://user-images.githubusercontent.com/83752978/128124045-86bac95c-5c5a-4b02-b426-a6ac35e392d3.png)
+![ER1 (8)](https://user-images.githubusercontent.com/83752978/128222489-c00bbf9a-ffd1-4a43-8fb0-5211debc003a.png)
+
 # 画面遷移図
 ![ER1 (7)](https://user-images.githubusercontent.com/83752978/128124507-5afcbd08-7c60-41d0-ab47-176471b2bc92.png)
