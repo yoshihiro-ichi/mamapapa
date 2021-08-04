@@ -25,3 +25,5 @@ $ rails s`
 [https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
 ![ER1 (5)](https://user-images.githubusercontent.com/83752978/128124045-86bac95c-5c5a-4b02-b426-a6ac35e392d3.png)
+# 画面遷移図
+![ER1 (7)](https://user-images.githubusercontent.com/83752978/128124507-5afcbd08-7c60-41d0-ab47-176471b2bc92.png)
