@@ -14,4 +14,4 @@
 $ cd MamaPapa  
 $ bundle install  
 $ rails db:create && rails db:migrate  
-$ rails s  `
+$ rails s`
