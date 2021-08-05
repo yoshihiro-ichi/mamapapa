@@ -22,6 +22,6 @@ $ rails s
 # ワイヤーフレーム
 [https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
-![ER1 (11)](https://user-images.githubusercontent.com/83752978/128411995-b1843ce5-7e37-4e9a-ab46-cfd441d420f1.png)
+![ER1 (12)](https://user-images.githubusercontent.com/83752978/128412193-c93b81c8-4c81-47ee-a467-b1ce5f74b513.png)
 # 画面遷移図
 ![ER1 (7)](https://user-images.githubusercontent.com/83752978/128124507-5afcbd08-7c60-41d0-ab47-176471b2bc92.png)
