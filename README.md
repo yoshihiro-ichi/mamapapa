@@ -13,7 +13,7 @@ $ cd MamaPapa
 $ git clone https://github.com/yoshihiro-ichi/mamapapa.git  
 $ bundle install  
 $ rails db:create && rails db:migrate  
-$ rails s`
+$ rails s
 ```
 # カタログ設計
 [https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing)
