@@ -9,8 +9,8 @@
 - ransack
 # 実行手段
 ```
-$ cd mamapapa  
 $ git clone https://github.com/yoshihiro-ichi/mamapapa.git  
+$ cd mamapapa  
 $ bundle install  
 $ rails db:create && rails db:migrate  
 $ rails s
