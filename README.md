@@ -9,7 +9,7 @@
 - ransack
 # 実行手段
 ```
-$ cd MamaPapa  
+$ cd mamapapa  
 $ git clone https://github.com/yoshihiro-ichi/mamapapa.git  
 $ bundle install  
 $ rails db:create && rails db:migrate  
@@ -22,7 +22,7 @@ $ rails s
 # ワイヤーフレーム
 [https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
-![ER1 (9)](https://user-images.githubusercontent.com/83752978/128331666-4454ef28-f418-470d-8f73-1525e66eb4aa.png)
+![ER1 (10)](https://user-images.githubusercontent.com/83752978/128410996-3e351a96-1a9c-4014-a544-0687c18a0a51.png)
 
 # 画面遷移図
 ![ER1 (7)](https://user-images.githubusercontent.com/83752978/128124507-5afcbd08-7c60-41d0-ab47-176471b2bc92.png)
