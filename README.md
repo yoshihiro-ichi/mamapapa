@@ -21,7 +21,7 @@ $ rails s
 # テーブル議定書
 [https://docs.google.com/spreadsheets/d/1x6C54Ku2z39lr03tY34H9N1TDButNAkMfPjhFYpDkPc/edit?usp=sharing](https://docs.google.com/spreadsheets/d/e/2PACX-1vTLdctwrm6vEngqQu0FptWpqlLHa7TMEEvyhAYHfcE4iAAyJNICZJpF4qaiTMWfbdokMYmkp532BRDr/pubhtml?gid=1110660072&single=true)
 # ワイヤーフレーム
-[https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68)
+[https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
 [https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F](https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F)
 ![ER1 (15)](https://user-images.githubusercontent.com/83752978/128461692-99766c36-f9e2-4fee-b170-5c006584fc18.png)
