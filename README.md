@@ -25,7 +25,7 @@ $ rails s
 [https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68)
 # ER図
 [https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F](https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F)
-![ER1 (12)](https://user-images.githubusercontent.com/83752978/128412193-c93b81c8-4c81-47ee-a467-b1ce5f74b513.png)
+![ER1 (15)](https://user-images.githubusercontent.com/83752978/128461692-99766c36-f9e2-4fee-b170-5c006584fc18.png)
 # 画面遷移図
 [https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68)
-![ER1 (7)](https://user-images.githubusercontent.com/83752978/128124507-5afcbd08-7c60-41d0-ab47-176471b2bc92.png)
+![ER1 (14)](https://user-images.githubusercontent.com/83752978/128461572-f4b1c6be-7cc8-4841-96d3-449fa9b5b258.png)
