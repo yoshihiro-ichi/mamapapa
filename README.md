@@ -5,6 +5,8 @@
 # 就業Termの技術
 - お気に入り機能
 - devise
+- フォロー機能
+- メッセージ機能
 # カリキュラム外の技術
 - ransack
 # 実行手段
@@ -22,6 +24,8 @@ $ rails s
 # ワイヤーフレーム
 [https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
+[https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F](https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F)
 ![ER1 (12)](https://user-images.githubusercontent.com/83752978/128412193-c93b81c8-4c81-47ee-a467-b1ce5f74b513.png)
 # 画面遷移図
+[https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68)
 ![ER1 (7)](https://user-images.githubusercontent.com/83752978/128124507-5afcbd08-7c60-41d0-ab47-176471b2bc92.png)
