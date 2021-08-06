@@ -27,4 +27,4 @@ $ rails s
 ![ER1 (15)](https://user-images.githubusercontent.com/83752978/128461692-99766c36-f9e2-4fee-b170-5c006584fc18.png)
 # 画面遷移図
 [https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68)
-![ER1 (16)](https://user-images.githubusercontent.com/83752978/128474985-264ef57b-a772-4eab-afcc-dee04dfe2906.png)
+![ER1 (17)](https://user-images.githubusercontent.com/83752978/128476167-8b9da9b2-4abb-4d13-a5f0-7953fd1723d3.png)
