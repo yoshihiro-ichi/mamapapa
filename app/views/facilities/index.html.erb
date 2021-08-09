@@ -1,0 +1,19 @@
+<h1>施設投稿一覧</h1>
+<table>
+  <tr>
+    <th>施設名</th>
+    <th>レビュー</th>
+    <th>タイプ</th>
+    <th>都道府県</th>
+    <th>住所</th>
+  <tr>
+  <% @facilities.each do |facility|%>
+    <tr>
+      <td><%= facility.title %> </td>
+      <td><%= facility.content %> </td>
+      <td><%= facility.types %> </td>
+      <td><%= facility.prefecture %> </td>
+      <td><%= facility.address %> </td>
+    </tr>
+  <% end %>
+</table>

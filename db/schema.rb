@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 2021_08_09_010758) do
     t.string "prefecture"
     t.string "address"
     t.string "price"
+    t.string "types"
     t.text "image"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
