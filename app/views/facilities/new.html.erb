@@ -1,0 +1,15 @@
+<%= form_with(model: @facility, local: true) do |form| %>
+  <div class="facility_title">
+    <%= form.label :施設名 %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="facility_content">
+    <%= form.label :レビュー %>
+    <%= form.text_field :content %>
+  </div>
+  <div class="facility_types">
+    <%= form.label :施設タイプ%>
+    <%= form.text_field :施設タイプ %>
+  </div>
+  <%= form.submit %>
+<% end %>
