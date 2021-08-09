@@ -23,9 +23,17 @@ class FacilitiesController < ApplicationController
   end
 
   def update
+      @facility = Facility.new(facility_params)
+      if @facility.save
+      redirect_to facilities_path,notice:"更新しました"
+      else
+       render :edit
+    end
   end
 
   def destroy
+    @facility.destroy
+    redirect_to facilities_path
   end
 
   private
