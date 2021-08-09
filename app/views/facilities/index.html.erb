@@ -14,6 +14,7 @@
       <td><%= facility.types %> </td>
       <td><%= facility.prefecture %> </td>
       <td><%= facility.address %> </td>
-    </tr>
+      <td><%= link_to '詳細へ', facility_path(facility.id)%></td>
   <% end %>
+    </tr>
 </table>

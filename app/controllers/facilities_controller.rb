@@ -1,5 +1,5 @@
 class FacilitiesController < ApplicationController
-
+  before_action :set_facility, only:[ :show,:edit, :update, :destroy]
   def index
     @facilities = Facility.all
   end
@@ -16,8 +16,24 @@ class FacilitiesController < ApplicationController
      render :new
     end
   end
+  def show
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
+
   private
   def facility_params
     params.require(:facility).permit(:title,:content,:types,:prefecture,:address,:types, :image)
+  end
+
+  def set_facility
+    @facility  = Facility.find(params[:id])
   end
 end
