@@ -23,8 +23,7 @@ class FacilitiesController < ApplicationController
   end
 
   def update
-      @facility = Facility.new(facility_params)
-      if @facility.save
+      if @facility.update(facility_params)
       redirect_to facilities_path,notice:"更新しました"
       else
        render :edit
@@ -33,7 +32,7 @@ class FacilitiesController < ApplicationController
 
   def destroy
     @facility.destroy
-    redirect_to facilities_path
+    redirect_to facilities_path,notice:"投稿を削除しました。"
   end
 
   private
