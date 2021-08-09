@@ -1,0 +1,13 @@
+<h3>以下の内容で、送信する。</h3>
+<%= form_with(model: @facility, local: true ) do |form| %>
+  <%= form.hidden_field :title %>
+  <%= form.hidden_field :content %>
+  <%= form.hidden_field :types %>
+  <%= form.hidden_field :prefecture %>
+  <%= form.hidden_field :address %>
+  <%= image_tag (@facility.image.url)if @facility.image && @facility.image.url %>
+  <%= form.hidden_field :image_cache %>
+  <p>タイトル:<%= @facility.title %></p>
+  <p>本文:<%= @facility.content %></p>
+  <%= form.submit  "登録する" %>
+<% end %>

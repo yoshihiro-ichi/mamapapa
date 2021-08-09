@@ -34,7 +34,9 @@ class FacilitiesController < ApplicationController
     @facility.destroy
     redirect_to facilities_path,notice:"投稿を削除しました。"
   end
-
+  def confirm
+      @facility = Facility.new(facility_params)
+  end
   private
   def facility_params
     params.require(:facility).permit(:title,:content,:types,:prefecture,:address,:types, :image,:image_cache)
