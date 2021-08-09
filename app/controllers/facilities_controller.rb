@@ -38,7 +38,7 @@ class FacilitiesController < ApplicationController
 
   private
   def facility_params
-    params.require(:facility).permit(:title,:content,:types,:prefecture,:address,:types, :image)
+    params.require(:facility).permit(:title,:content,:types,:prefecture,:address,:types, :image,:image_cache)
   end
 
   def set_facility

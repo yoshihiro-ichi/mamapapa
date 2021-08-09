@@ -9,6 +9,7 @@
   <tr>
   <% @facilities.each do |facility|%>
     <tr>
+      <td> <%= image_tag (facility.image.url)if facility.image && facility.image.url %></td>
       <td><%= facility.title %> </td>
       <td><%= facility.content %> </td>
       <td><%= facility.types %> </td>
