@@ -1,0 +1,27 @@
+<th><%= link_to "HOME", facilities_path  %></th>
+<th><%= link_to '新規投稿', new_facility_path%></th>
+<h1>施設詳細</h1>
+<p>
+<%= image_tag (@facility.image.url)if @facility.image && @facility.image.url %>
+</p>
+<p>
+  <strong>施設名</strong>
+  <%= @facility.title %>
+</p>
+<p>
+  <strong> レビュー</strong>
+  <%= @facility.content %>
+</p>
+<p>
+  <strong> タイプ</strong>
+  <%= @facility.types %>
+</p>
+<p>
+  <strong>都道府県</strong>
+  <%= @facility.prefecture  %>
+</p>
+<p>
+  <strong>住所</strong>
+  <%= @facility.address  %>
+</p>
+<%= link_to '戻る', facilities_path %>

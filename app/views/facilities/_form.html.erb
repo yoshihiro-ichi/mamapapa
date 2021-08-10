@@ -1,0 +1,40 @@
+<% if @facility.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @facility.errors.count %>件のエラーがあります。</h2>
+    <ul>
+    <% @facility.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
+<%= form_with(model: @facility, local: true, url: choose_new_or_edit  ) do |form| %>
+  <div class="title">
+    <%= form.label :施設名 %>
+    <%= form.text_field :title %>
+  </div>
+  <div class="content">
+    <%= form.label :レビュー %>
+    <%= form.text_field :content %>
+  </div>
+  <div class="types">
+    <%= form.label :施設タイプ%>
+    <%= form.text_field :types %>
+  </div>
+  <div class="prefecture">
+    <%= form.label :prefecture%>
+    <%= form.text_field :prefecture %>
+  </div>
+  <div class="address">
+    <%= form.label :address%>
+    <%= form.text_field :address %>
+  </div>
+  <div class="image">
+<%= form.label :image %>
+<%= form.file_field :image %>
+<%= form.hidden_field :image_cache %>
+</div>
+
+  <%= form.submit %>
+<% end %>
