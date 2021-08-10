@@ -10,12 +10,17 @@ class FacilitiesController < ApplicationController
 
   def create
     @facility = Facility.new(facility_params)
-    if @facility.save
-        redirect_to facilities_path,notice:"投稿しました"
+    if params[:back]
+      render :new
     else
-     render :new
+      if @facility.save
+        redirect_to facilities_path,notice:"投稿しました"
+      else
+        render :new
+      end
     end
   end
+
   def show
   end
 

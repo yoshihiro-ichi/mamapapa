@@ -20,7 +20,7 @@
       <td><%= facility.address %> </td>
       <td><%= link_to '詳細へ', facility_path(facility.id)%></td>
       <td><%= link_to '編集へ', edit_facility_path(facility.id)%></td>
-      <td><%= link_to '削徐', facility_path(facility.id), method: :delete %></td>
+      <td><%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
   <% end %>
     </tr>
 </table>
