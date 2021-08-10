@@ -41,6 +41,7 @@ class FacilitiesController < ApplicationController
   end
   def confirm
       @facility = Facility.new(facility_params)
+      render :new if @facility.invalid?
   end
   private
   def facility_params

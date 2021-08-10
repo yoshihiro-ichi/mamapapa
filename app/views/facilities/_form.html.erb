@@ -1,4 +1,15 @@
 <p><%= link_to "施設一覧画面にもどる", facilities_path  %></p>
+<% if @facility.errors.any? %>
+  <div id="error_explanation">
+    <h2><%= @facility.errors.count %>件のエラーがあります。</h2>
+    <ul>
+    <% @facility.errors.full_messages.each do |msg| %>
+      <li><%= msg %></li>
+    <% end %>
+    </ul>
+  </div>
+<% end %>
+
 <%= form_with(model: @facility, local: true, url: choose_new_or_edit  ) do |form| %>
   <div class="title">
     <%= form.label :施設名 %>
