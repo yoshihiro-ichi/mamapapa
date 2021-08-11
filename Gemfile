@@ -33,3 +33,4 @@ end
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'carrierwave'
   gem 'mimemagic', '0.3.7'
+  gem 'devise'
