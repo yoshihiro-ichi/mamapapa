@@ -38,3 +38,4 @@ end
   gem 'devise-i18n'
   gem 'devise-i18n-views'
   gem 'rails_admin', '~> 2.0'
+  gem 'cancancan'
