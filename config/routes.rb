@@ -7,6 +7,8 @@ Rails.application.routes.draw do
     end
   end
   root 'faciliies#index'
+  mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
+
   # resources :facilities do
   #   member do
   #     patch:confirm
