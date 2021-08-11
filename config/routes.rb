@@ -6,7 +6,7 @@ Rails.application.routes.draw do
       post:confirm
     end
   end
-  root 'faciliies#index'
+  root 'facilities#index'
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
 
   # resources :facilities do
