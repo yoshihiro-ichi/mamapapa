@@ -34,3 +34,4 @@ end
   gem 'carrierwave'
   gem 'mimemagic', '0.3.7'
   gem 'devise'
+  gem 'rails_admin', '~> 2.0'
