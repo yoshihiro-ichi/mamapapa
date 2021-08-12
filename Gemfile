@@ -16,6 +16,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]
+  gem 'letter_opener_web'
 end
 
 group :development do
@@ -33,3 +34,8 @@ end
   gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
   gem 'carrierwave'
   gem 'mimemagic', '0.3.7'
+  gem 'devise'
+  gem 'devise-i18n'
+  gem 'devise-i18n-views'
+  gem 'rails_admin', '~> 2.0'
+  gem 'cancancan'
