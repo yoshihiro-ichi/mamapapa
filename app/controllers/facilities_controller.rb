@@ -10,8 +10,8 @@ class FacilitiesController < ApplicationController
   end
 
   def create
-    @facility = Fcility.new(facility_params)
-    @facility = current_user.id
+    @facility = current_user.facilities.build(facility_params)
+
     if params[:back]
       render :new
     else
