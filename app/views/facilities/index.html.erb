@@ -1,10 +1,7 @@
-<th><%= link_to "HOME", facilities_path  %></th>
-<th><%= link_to '新規投稿', new_facility_path%></th>
 <%if current_user.try(:admin?)%>
   <th><%= link_to '管理画面へ', rails_admin_path%></th>
 <%end%>
 <h2>施設投稿一覧</h2>
-<p><%= notice %></p>
 <table>
   <tr>
     <th>画像</th>
