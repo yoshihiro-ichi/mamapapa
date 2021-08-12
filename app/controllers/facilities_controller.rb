@@ -10,7 +10,8 @@ class FacilitiesController < ApplicationController
   end
 
   def create
-    @facility = Facility.new(facility_params)
+    @facility = Fcility.new(facility_params)
+    @facility = current_user.id
     if params[:back]
       render :new
     else
@@ -30,9 +31,9 @@ class FacilitiesController < ApplicationController
 
   def update
       if @facility.update(facility_params)
-      redirect_to facilities_path,notice:"更新しました"
+        redirect_to facilities_path,notice:"更新しました"
       else
-       render :edit
+        render :edit
     end
   end
 
@@ -41,12 +42,12 @@ class FacilitiesController < ApplicationController
     redirect_to facilities_path,notice:"投稿を削除しました。"
   end
   def confirm
-      @facility = Facility.new(facility_params)
+        @facility = current_user.facilities.build(facility_params)
       render :new if @facility.invalid?
   end
   private
   def facility_params
-    params.require(:facility).permit(:title,:content,:types,:prefecture,:address,:types, :image,:image_cache)
+    params.require(:facility).permit(:title,:content,:types,:prefecture,:address,:types, :image,:image_cache,:use_id)
   end
 
   def set_facility
