@@ -1,4 +1,6 @@
 <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
+<%= link_to '管理ユーザーログイン', users_admin_guest_sign_in_path, method: :post %>
+
 <h2><%= t('.sign_up') %></h2>
 
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
