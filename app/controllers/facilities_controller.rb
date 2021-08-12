@@ -24,6 +24,7 @@ class FacilitiesController < ApplicationController
   end
 
   def show
+    @favorite = current_user.favorites.find_by(facility_id: @facility.id)
   end
 
   def edit
