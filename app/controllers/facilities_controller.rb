@@ -1,6 +1,6 @@
 class FacilitiesController < ApplicationController
   before_action :set_facility, only:[ :show,:edit, :update, :destroy]
-  before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :authenticate_user!, only: [:index,:new, :edit, :update, :destroy]
   before_action :set_q, only: [:index, :search]
 
   def index
