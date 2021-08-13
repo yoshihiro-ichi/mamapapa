@@ -4,8 +4,15 @@ Rails.application.routes.draw do
   resources :facilities do
     collection do
       post:confirm
+      get:search
     end
   end
+ # serchと干渉してエラー起きる
+  # resources :facilities do
+  #   collection do
+  #     get 'search'
+  #   end
+  # end
   resources :favorites, only: [:create, :destroy]
   root 'facilities#index'
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
