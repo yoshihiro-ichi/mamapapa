@@ -8,13 +8,7 @@ Rails.application.routes.draw do
       get:search
     end
   end
- # serchと干渉してエラー起きる
-  # resources :facilities do
-  #   collection do
-  #     get 'search'
-  #   end
-  # end
-  resources :favorites, only: [:create, :destroy]
+   resources :favorites, only: [:create, :destroy,:index]
   root 'facilities#index'
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   devise_scope :user do

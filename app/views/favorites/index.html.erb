@@ -1,0 +1,8 @@
+<h1>お気に入り一覧</h1>
+<% @favorites.each do |favorite| %>
+  <td><%= image_tag(favorite.facility.image.url) if favorite.facility.image && favorite.facility.image.url %></td>
+  <p><%= favorite.facility.title %></p>
+  <p><%= favorite.facility.content %></p>
+  <p><%= favorite.facility.user.name%></p>
+<p><%= link_to '戻る', facility_path(favorite.facility.id) %></p>
+<%end%>
