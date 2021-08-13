@@ -1,0 +1,28 @@
+<h1>検索結果</h1>
+<table>
+  <tr>
+    <th>画像</th>
+    <th>投稿者</th>
+    <th>施設名</th>
+    <th>レビュー</th>
+    <th>タイプ</th>
+    <th>都道府県</th>
+    <th>住所</th>
+  </tr>
+  <tr>
+    <% @results.each do |facility|%>
+      <tr>
+        <td> <%= image_tag (facility.image.url)if facility.image && facility.image.url %></td>
+        <td><%= facility.user.name=%></td>
+        <td><%= facility.title %> </td>
+        <td><%= facility.content %> </td>
+        <td><%= facility.types %> </td>
+        <td><%= facility.prefecture %> </td>
+        <td><%= facility.address %> </td>
+        <td><%= link_to '詳細へ', facility_path(facility.id)%></td>
+        <td><%= link_to '編集へ', edit_facility_path(facility.id)%></td>
+        <td><%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
+      </tr>
+  <% end %>
+
+</table>

@@ -1,8 +1,12 @@
 class FacilitiesController < ApplicationController
   before_action :set_facility, only:[ :show,:edit, :update, :destroy]
   before_action :authenticate_user!, only: [:new, :edit, :update, :destroy]
+  before_action :set_q, only: [:index, :search]
+
   def index
     @facilities = Facility.all
+    @q = Facility.ransack(params[:q])
+    @faciliti = @q.result(distinct: true)
   end
 
   def new
@@ -46,7 +50,17 @@ class FacilitiesController < ApplicationController
         @facility = current_user.facilities.build(facility_params)
       render :new if @facility.invalid?
   end
+
+  def search
+    @results = @q.result
+  end
+
   private
+
+  def set_q
+    @q = Facility.ransack(params[:q])
+  end
+
   def facility_params
     params.require(:facility).permit(:title,:content,:types,:prefecture,:address,:types, :image,:image_cache,:use_id)
   end
