@@ -43,3 +43,4 @@ end
   gem 'rails_admin', '~> 2.0'
   gem 'cancancan'
   gem 'ransack', github: 'activerecord-hackery/ransack'
+  gem 'kaminari'
