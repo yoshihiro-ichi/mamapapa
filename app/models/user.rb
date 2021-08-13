@@ -4,6 +4,7 @@ class User < ApplicationRecord
   # mount_uploader :image, ImageUploader
   has_many :facilities
   has_many :favorites, dependent: :destroy
+  mount_uploader :image, ImageUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
