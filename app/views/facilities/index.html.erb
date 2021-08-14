@@ -1,16 +1,19 @@
 <%if current_user.try(:admin?)%>
+<div class="text-center">
+
   <th><%= link_to '管理画面へ', rails_admin_path%></th>
 <%end%>
   <th><%= link_to 'プロフィール', user_path(current_user.id)%></th>
-<h2>施設投稿一覧</h2>
+<h2 class="text-center">施設投稿一覧</h2>
 <%= search_form_for @q, url: search_facilities_path do |f| %>
   <%= f.label :title_cont, '施設名' %>
   <%= f.search_field :title_cont %>
   <br>
   <%= f.submit '検索' %>
 <% end %>
-<table>
-  <tr>
+<div class="text-center">
+<table style ="margin-left: 25%">
+    <tr>
     <th>画像</th>
     <th>投稿者</th>
     <th>施設名</th>
@@ -21,7 +24,7 @@
   <tr>
     <% @facilities.each do |facility|%>
       <tr>
-      <td> <%= image_tag (facility.image.url)if facility.image && facility.image.url %></td>
+      <td> <%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></td>
       <td><%= facility.user.name=%></td>
       <td><%= facility.title %> </td>
       <td><%= facility.content %> </td>
@@ -36,4 +39,5 @@
     <% end %>
   </tr>
 </table>
+</div>
 <%= paginate @facilities %>

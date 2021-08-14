@@ -4,13 +4,13 @@
     <title>MamaPapa</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <link href="https://fonts.googleapis.com/css?family=Homemade+Apple rel="stylesheet">
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
   <body>
-    <h1>MamaPama</h1>
+    <h1 class="text-center" style= "font-family:Homemade Apple,cursive;">MamaPama</h1>
     <% if user_signed_in? %>
       <%= link_to "HOME", facilities_path %>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
@@ -27,4 +27,7 @@
      <% end %>
     <%= yield %>
   </body>
+  <footer class="text-center">
+    <h4>MamaPapa</h4>
+  </footer>
 </html>
