@@ -9,7 +9,7 @@
 このアプリによって子育てしている親目線で見た、子供と遊びに行く場所や病院の情報を素早く手に入れることができます。  
 また自身が投稿することによって、過去にいった場所の情報をメモとして残すことができるため、同じ場所の情報を1から調べるといった手間を省くことができます。
 # 開発言語
-- Ruby 2.6.5
+- Ruby 2.6.6
 - Rails 5.2.5
 # 就業Termの技術
 - お気に入り機能
@@ -33,7 +33,8 @@ $ rails s
 [https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/CdQVDJG5W84o5Wwv/3EB69)
 # ER図
 [https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F](https://cacoo.com/diagrams/apr2EGIQcin71SwX/7F13F)
-![ER1 (19)](https://user-images.githubusercontent.com/83752978/128592950-7c98439f-753f-4da3-82c2-375052f773f4.png)
+![ER1 (20)](https://user-images.githubusercontent.com/83752978/129456023-4cc02d31-895f-4282-96d3-fd071295dd74.png)
+
 # 画面遷移図
 [https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68](https://cacoo.com/diagrams/qOXtkq5QZA2AxgO7/17A68)
 ![ER1 (17)](https://user-images.githubusercontent.com/83752978/128476167-8b9da9b2-4abb-4d13-a5f0-7953fd1723d3.png)
