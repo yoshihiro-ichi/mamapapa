@@ -8,7 +8,8 @@ Rails.application.routes.draw do
       get:search
     end
   end
-   resources :favorites, only: [:create, :destroy,:index]
+  resources :favorites, only: [:create, :destroy,:index]
+
   root 'facilities#index'
   mount LetterOpenerWeb::Engine, at: "/letter_opener" if Rails.env.development?
   devise_scope :user do
