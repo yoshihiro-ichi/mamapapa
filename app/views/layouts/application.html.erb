@@ -14,16 +14,18 @@
       <h1 class="text-center" style= "font-family:Homemade Apple,cursive;">MamaPama</h1>
       <% if user_signed_in? %>
         <%= link_to "HOME", facilities_path %>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         <%= link_to '新規投稿', new_facility_path%>
         <%= link_to 'プロフィール', user_path(current_user.id)%>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
         <%if current_user.try(:admin?)%>
           <%= link_to '管理画面へ', rails_admin_path%>
         <%end%>
       <% else %>
         <%= link_to "新規登録", new_user_registration_path %>
         <%= link_to "ログイン", new_user_session_path %>
-          <% end %>
+        <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
+        <%= link_to '管理ユーザーログイン', users_admin_guest_sign_in_path, method: :post %>
+      <% end %>
     </header>
       <% if notice %>
          <p class="alert alert-notice"><%= notice %></p>
@@ -41,7 +43,7 @@
   </div>
 </body>
 
-  <footer class="text-center">
+  <footer class="text-center" style= "font-family:Homemade Apple,cursive;">
     <h4>MamaPapa</h4>
   </footer>
 </html>
