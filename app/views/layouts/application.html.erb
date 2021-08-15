@@ -10,27 +10,34 @@
   </head>
 
   <body>
-  <div class="header">
-    <h1 class="text-center" style= "font-family:Homemade Apple,cursive;">MamaPama</h1>
-    <% if user_signed_in? %>
-      <%= link_to "HOME", facilities_path %>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <%= link_to '新規投稿', new_facility_path%>
-      <%= link_to 'プロフィール', user_path(current_user.id)%>
-      <%if current_user.try(:admin?)%>
-        <%= link_to '管理画面へ', rails_admin_path%>
-      <%end%>
-    <% else %>
-      <%= link_to "新規登録", new_user_registration_path %>
-      <%= link_to "ログイン", new_user_session_path %>
-        <% end %>
-    <% if notice %>
-       <p class="alert alert-notice"><%= notice %></p>
-     <% end %>
-     <% if alert %>
-       <p class="alert alert-error"><%= alert %></p>
-     <% end %>
-    <%= yield %>
+    <header>
+      <h1 class="text-center" style= "font-family:Homemade Apple,cursive;">MamaPama</h1>
+      <% if user_signed_in? %>
+        <%= link_to "HOME", facilities_path %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+        <%= link_to '新規投稿', new_facility_path%>
+        <%= link_to 'プロフィール', user_path(current_user.id)%>
+        <%if current_user.try(:admin?)%>
+          <%= link_to '管理画面へ', rails_admin_path%>
+        <%end%>
+      <% else %>
+        <%= link_to "新規登録", new_user_registration_path %>
+        <%= link_to "ログイン", new_user_session_path %>
+          <% end %>
+    </header>
+      <% if notice %>
+         <p class="alert alert-notice"><%= notice %></p>
+       <% end %>
+       <% if alert %>
+         <p class="alert alert-error"><%= alert %></p>
+       <% end %>
+      <%= yield %>
+  <div class="content">
+
+
+
+
+
   </div>
 </body>
 
