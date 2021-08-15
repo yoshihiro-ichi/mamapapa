@@ -16,7 +16,7 @@
     <table class="post_facility" style = "width:100%">
       <tr>
         <td rowspan="6"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></td>
-        <td>
+        <td class="text-center" >
           <br><strong>投稿者</strong><%= facility.user.name=%>
           <br><strong>施設名</strong>:<%= facility.title %>
           <br><strong>レビュー</strong>:<%= facility.content %>
@@ -24,13 +24,12 @@
           <br><strong>都道府県</strong>:<%= facility.prefecture %>
           <br><strong>住所</strong>:<%= facility.address %>
         </td>
+        <td><%= link_to '詳細へ', facility_path(facility.id)%></td>
+        <% if facility.user_id == current_user.id %>
+          <td><%= link_to '編集へ', edit_facility_path(facility.id)%></td>
+          <td><%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
+        <% end %>
       </tr>
     </table>
-
-
-    <%= link_to '詳細へ', facility_path(facility.id)%>
-    <% if facility.user_id == current_user.id %>
-      <%= link_to '編集へ', edit_facility_path(facility.id)%>
-      <%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %>
-    <% end %>
   <% end %>
+</div>
