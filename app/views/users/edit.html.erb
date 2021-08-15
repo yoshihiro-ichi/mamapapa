@@ -1,16 +1,26 @@
 <%= form_with model: @user, url:user_path do |f| %>
   <div class="field">
-  <%= f.label :image %>
-   <%= image_tag @user.image.url if @user.image && @user.image.url %>
-   <%= f.file_field :image %>
-   <%= f.hidden_field :image_cache %>
-   <%= f.label :name %>
-   <%= f.text_field :name %>
-   <%= f.label :email %>
-   <%= f.email_field :email %>
-   <%= f.label :password %>
-   <%= f.password_field :password %>
-   <%= f.label :password_confirmation %>
-   <%= f.password_field :password_confirmation %>
-   <%= f.submit "プロフィール編集完了" %>
+    <%= f.label :image %>
+    <%= image_tag @user.image.url if @user.image && @user.image.url %>
+    <%= f.file_field :image %>
+    <%= f.hidden_field :image_cache %>
+  </div>
+  <div class="name_field">
+    <br><%= f.label :name %>
+    <br><%= f.text_field :name %>
+  </div>
+  <div class="email_field">
+    <br><%= f.label :email %>
+    <br><%= f.email_field :email %>
+  </div>
+  <div class="password_field">
+    <br><%= f.label :password %>
+    <br><%= f.password_field :password %>
+  </div>
+  <div class="password_confirmation_field">
+    <br><%= f.label :password_confirmation %>
+    <br><%= f.password_field :password_confirmation %>
+  </div>
+  <br><%= f.submit "プロフィール編集完了" %>
+
 <%end%>
