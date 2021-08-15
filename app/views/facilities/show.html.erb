@@ -1,5 +1,3 @@
-<th><%= link_to "HOME", facilities_path  %></th>
-<th><%= link_to '新規投稿', new_facility_path%></th>
 <h1>施設詳細</h1>
 <p>
 <%= image_tag (@facility.image.url)if @facility.image && @facility.image.url %>
@@ -35,4 +33,4 @@
   <% end %>
 <% end %>
 </p>
-<%= link_to '戻る', facilities_path %>
+<%= link_to '戻る', facilities_path,class: 'btn btn-danger'%>

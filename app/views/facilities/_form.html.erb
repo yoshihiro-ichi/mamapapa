@@ -11,29 +11,29 @@
 
 <%= form_with(model: @facility, local: true, url: choose_new_or_edit  ) do |form| %>
   <div class="title">
-    <%= form.label :施設名 %>
-    <%= form.text_field :title %>
+    <br><%= form.label :施設名 %>
+    <br><%= form.text_field :title %>
   </div>
   <div class="content">
-    <%= form.label :レビュー %>
-    <%= form.text_field :content %>
+    <br><%= form.label :レビュー %>
+    <br><%= form.text_field :content %>
   </div>
   <div class="types">
-    <%= form.label :施設タイプ%>
-    <%= form.text_field :types %>
+    <br><%= form.label :施設タイプ%>
+    <br><%= form.text_field :types %>
   </div>
   <div class="prefecture">
-    <%= form.label :prefecture%>
-    <%= form.text_field :prefecture %>
+    <br><%= form.label :prefecture%>
+    <br><%= form.text_field :prefecture %>
   </div>
   <div class="address">
-    <%= form.label :address%>
-    <%= form.text_field :address %>
+    <br><%= form.label :address%>
+    <br><%= form.text_field :address %>
   </div>
-  <div class="image">
-<%= form.label :image %>
-<%= form.file_field :image %>
-<%= form.hidden_field :image_cache %>
+  <div class=image">
+    <br><%= form.label :image %>
+    <br><%= form.file_field :image %>
+    <br><%= form.hidden_field :image_cache %>
 </div>
 
   <%= form.submit %>

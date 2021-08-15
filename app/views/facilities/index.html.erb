@@ -1,43 +1,35 @@
-<%if current_user.try(:admin?)%>
-<div class="text-center">
-
-  <th><%= link_to '管理画面へ', rails_admin_path%></th>
-<%end%>
-  <th><%= link_to 'プロフィール', user_path(current_user.id)%></th>
 <h2 class="text-center">施設投稿一覧</h2>
-<%= search_form_for @q, url: search_facilities_path do |f| %>
-  <%= f.label :title_cont, '施設名' %>
-  <%= f.search_field :title_cont %>
-  <br>
-  <%= f.submit '検索' %>
-<% end %>
 <div class="text-center">
-<table style ="margin-left: 25%">
-    <tr>
-    <th>画像</th>
-    <th>投稿者</th>
-    <th>施設名</th>
-    <th>レビュー</th>
-    <th>タイプ</th>
-    <th>都道府県</th>
-    <th>住所</th>
-  <tr>
-    <% @facilities.each do |facility|%>
-      <tr>
-      <td> <%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></td>
-      <td><%= facility.user.name=%></td>
-      <td><%= facility.title %> </td>
-      <td><%= facility.content %> </td>
-      <td><%= facility.types %> </td>
-      <td><%= facility.prefecture %> </td>
-      <td><%= facility.address %> </td>
-        <td><%= link_to '詳細へ', facility_path(facility.id)%></td>
-      <% if facility.user_id == current_user.id %>
-        <td><%= link_to '編集へ', edit_facility_path(facility.id)%></td>
-        <td><%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
-      <% end %>
-    <% end %>
-  </tr>
-</table>
+<div class="search_field">
+  <%= search_form_for @q, url: search_facilities_path do |f| %>
+    <strong><%= f.label :title_cont, '施設名・住所' %></strong>
+    <strong><%= f.search_field :title_cont,placeholder:"施設名のを入力" %></strong>
+    <strong><%= f.search_field :prefecture_cont,placeholder:"住所を入力" %></strong>
+    <strong><%= f.submit '検索' %></strong>
+  <% end %>
 </div>
-<%= paginate @facilities %>
+<div class="paginate">
+  <strong><%= paginate @facilities %></strong>
+</div>
+<div class="contents">
+  <% @facilities.each do |facility|%>
+    <table class="post_facility" style = "width:100%">
+      <tr>
+        <td rowspan="6"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></td>
+        <td class="text-center" >
+          <br><strong>投稿者</strong><%= facility.user.name=%>
+          <br><strong>施設名</strong>:<%= facility.title %>
+          <br><strong>レビュー</strong>:<%= facility.content %>
+          <br><strong>タイプ</strong>:<%= facility.types %>
+          <br><strong>都道府県</strong>:<%= facility.prefecture %>
+          <br><strong>住所</strong>:<%= facility.address %>
+        </td>
+        <td><%= link_to '詳細へ', facility_path(facility.id)%></td>
+        <% if facility.user_id == current_user.id %>
+          <td><%= link_to '編集へ', edit_facility_path(facility.id)%></td>
+          <td><%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
+        <% end %>
+      </tr>
+    </table>
+  <% end %>
+</div>
