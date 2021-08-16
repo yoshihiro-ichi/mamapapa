@@ -24,10 +24,10 @@
           <br><strong>都道府県</strong>:<%= facility.prefecture %>
           <br><strong>住所</strong>:<%= facility.address %>
         </td>
-        <td><%= link_to '詳細へ', facility_path(facility.id)%></td>
+        <td><%= link_to '詳細へ', facility_path(facility.id), class:"btn btn-info"%></td>
         <% if facility.user_id == current_user.id %>
-          <td><%= link_to '編集へ', edit_facility_path(facility.id)%></td>
-          <td><%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
+          <td><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success"%></td>
+          <td><%= link_to '削徐', facility_path(facility.id), class:"btn btn-danger",method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
         <% end %>
       </tr>
     </table>
