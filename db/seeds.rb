@@ -16,3 +16,7 @@ User.all.each do |user|
     types:'屋外'
     )
 end
+Favorite.create!(
+    user_id: User.first.id,
+    post_id: Post.first.id,
+    )
