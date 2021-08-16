@@ -12,29 +12,28 @@
 <%= form_with(model: @facility, local: true, url: choose_new_or_edit  ) do |form| %>
   <div class="title">
     <br><%= form.label :施設名 %>
-    <br><%= form.text_field :title %>
+    <br><%= form.text_field :title,placeholder:"施設名を入力" %>
   </div>
   <div class="content">
     <br><%= form.label :レビュー %>
-    <br><%= form.text_field :content %>
+    <br><%= form.text_field :content,placeholder:"レビューを入力" %>
   </div>
   <div class="types">
     <br><%= form.label :施設タイプ%>
-    <br><%= form.text_field :types %>
+    <br><%= form.text_field :types,placeholder:"例：屋外・屋内・病院…" %>
   </div>
   <div class="prefecture">
     <br><%= form.label :prefecture%>
-    <br><%= form.text_field :prefecture %>
+    <br><%= form.text_field :prefecture,placeholder:"都道府県を入力" %>
   </div>
   <div class="address">
     <br><%= form.label :address%>
-    <br><%= form.text_field :address %>
+    <br><%= form.text_field :address,placeholder:"市町村以下住所を入力" %>
   </div>
-  <div class=image">
+  <div class="image">
     <br><%= form.label :image %>
     <br><%= form.file_field :image %>
     <br><%= form.hidden_field :image_cache %>
 </div>
-
   <%= form.submit %>
 <% end %>

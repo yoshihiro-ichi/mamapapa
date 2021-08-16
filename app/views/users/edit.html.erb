@@ -7,19 +7,19 @@
   </div>
   <div class="name_field">
     <br><%= f.label :name %>
-    <br><%= f.text_field :name %>
+    <br><%= f.text_field :name ,placeholder:"名前を入力" %>
   </div>
   <div class="email_field">
     <br><%= f.label :email %>
-    <br><%= f.email_field :email %>
+    <br><%= f.email_field :email ,placeholder:"snmple@sample.com" %>
   </div>
   <div class="password_field">
     <br><%= f.label :password %>
-    <br><%= f.password_field :password %>
+    <br><%= f.password_field :password ,placeholder:"6字以上で入力してください"  %>
   </div>
   <div class="password_confirmation_field">
     <br><%= f.label :password_confirmation %>
-    <br><%= f.password_field :password_confirmation %>
+    <br><%= f.password_field :password_confirmation,placeholder:"確認用、もう一度入力してくさい"  %>
   </div>
   <br><%= f.submit "プロフィール編集完了" %>
 
