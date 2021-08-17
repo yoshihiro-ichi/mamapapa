@@ -4,7 +4,7 @@ class FacilitiesController < ApplicationController
   before_action :set_q, only: [:index, :search]
   before_action :login_check, only:[:edit,:destroy]
   def index
-    @facilities = Facility.all.page(params[:page]).per(3)
+    @facilities = Facility.all.order(created_at: :desc).page(params[:page]).per(3)
     @q = Facility.ransack(params[:q])
     @faciliti = @q.result(distinct: true)
   end
