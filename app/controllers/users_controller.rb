@@ -3,6 +3,7 @@ class UsersController < ApplicationController
   before_action :ensure_correct_user,only:[:edit]
 
   def show
+    @facilities = @user.facilities
   end
 
   def edit
