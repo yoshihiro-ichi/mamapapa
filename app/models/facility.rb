@@ -7,5 +7,4 @@ class Facility < ApplicationRecord
  validates :title, presence: true, length:{ maximum: 20 }
  validates :content, presence: true,length:{ maximum: 250 }
  validates :prefecture, presence: true,length:{ maximum: 10 }
- validates :address, presence: true
 end
