@@ -29,7 +29,8 @@ class FacilitiesController < ApplicationController
 
   def show
     @favorite = current_user.favorites.find_by(facility_id: @facility.id)
-
+    @comments = @facility.comments
+    @comment = @facility.comments.build
   end
 
   def edit

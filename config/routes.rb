@@ -7,6 +7,7 @@ Rails.application.routes.draw do
       post:confirm
       get:search
     end
+    resources :comments
   end
   resources :favorites, only: [:create, :destroy,:index]
   get 'top/index'
