@@ -4,3 +4,25 @@
   <p><%= link_to 'プロフィール編集', edit_user_path(@user) , class: 'btn btn-primary'%></p>
 <% end %>
 <p><%= link_to 'お気に入り一覧へ',  favorites_path,class:"btn btn-info" %></p>
+<p>↓↓投稿一覧↓↓</p>
+<% @facilities.each do |facility|%>
+  <table class="post_facility" style = "width:100%">
+    <tr>
+      <td rowspan="6"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></td>
+        <td class="text-center" >
+          <br><strong>施設名</strong>:<%= facility.title %>
+          <br><strong>レビュー</strong>:<%= facility.content %>
+          <br><strong>タイプ</strong>:<%= facility.types %>
+          <br><strong>都道府県</strong>:<%= facility.prefecture %>
+          <br><strong>住所</strong>:<%= facility.address %>
+        </td>
+      <td>
+          <br><%= link_to '詳細へ', facility_path(facility.id), class:"btn btn-info"%>
+          <% if facility.user_id == current_user.id %>
+            <br><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success"%>
+            <br><%= link_to '削徐', facility_path(facility.id), class:"btn btn-danger",method: :delete,data:{ confirm: '本当に削除していいですか？' } %>
+          <% end %>
+      </td>
+    </tr>
+  <table>
+<%end%>
