@@ -1,8 +1,34 @@
 <h1>お気に入り一覧</h1>
 <% @favorites.each do |favorite| %>
-  <p><%= favorite.facility.title %></p>
-  <p><%= favorite.facility.content %></p>
-  <p><%= favorite.facility.user.name%></p>
-  <p><%= link_to '戻る', facility_path(favorite.facility.id) %></p>
-  <p><%= image_tag(favorite.facility.image.url) if favorite.facility.image && favorite.facility.image.url %></p>
+  <table class="post_facility" style = "width:60%">
+    <tr>
+      <th rowspan="7"><%= image_tag (favorite.facility.image.url(:thumb).to_s)if favorite.facility.image && favorite.facility.image.url %></th>
+
+    </tr>
+    <tr>
+      <td><strong>投稿者</strong></td>
+      <td><%= favorite.facility.user.name=%></td>
+    </tr>
+    <tr>
+      <td><strong>施設名</strong></td>
+      <td><%= favorite.facility.title %></td>
+      <td><%= link_to '詳細へ', facility_path(favorite.facility.id), class:"btn btn-info btn-sm"%></td>
+    </tr>
+    <tr>
+      <td><strong>レビュー</strong></td>
+      <td><%= favorite.facility.content %></td>
+    </tr>
+    <tr>
+      <td><strong>タイプ</strong></td>
+      <td><%= favorite.facility.types %></td>
+    </tr>
+    <tr>
+      <td><strong>都道府県</strong></td>
+      <td><%= favorite.facility.prefecture %></td>
+    </tr>
+    <tr>
+      <td><strong>住所</strong></td>
+      <td><%= favorite.facility.address %></td>
+    </tr>
+  </table>
 <%end%>
