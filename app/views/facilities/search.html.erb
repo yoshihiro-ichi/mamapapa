@@ -1,30 +1,41 @@
 <h1>検索結果</h1>
-<table>
-  <tr>
-    <th>画像</th>
-    <th>投稿者</th>
-    <th>施設名</th>
-    <th>レビュー</th>
-    <th>タイプ</th>
-    <th>都道府県</th>
-    <th>住所</th>
-  </tr>
-  <tr>
-    <% @results.each do |facility|%>
+<div class="contents">
+  <% @results.each do |facility|%>
+    <table class="post_facility" style = "width:60%">
       <tr>
-        <td> <%= image_tag (facility.image.url)if facility.image && facility.image.url %></td>
-        <td><%= facility.user.name=%></td>
-        <td><%= facility.title %> </td>
-        <td><%= facility.content %> </td>
-        <td><%= facility.types %> </td>
-        <td><%= facility.prefecture %> </td>
-        <td><%= facility.address %> </td>
-        <td><%= link_to '詳細へ', facility_path(facility.id), class:"btn btn-info"%></td>
-        <% if facility.user_id == current_user.id %>
-          <td><%= link_to '編集へ', edit_facility_path(facility.id)%></td>
-          <td><%= link_to '削徐', facility_path(facility.id), method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
-        <% end %>
+        <th rowspan="7"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></th>
       </tr>
+      <tr>
+        <td><strong>投稿者</strong></td>
+        <td><%= facility.user.name=%></td>
+      </tr>
+      <tr>
+        <td><strong>施設名</strong></td>
+        <td><%= facility.title %></td>
+        <td><%= link_to '詳細へ', facility_path(facility.id), class:"btn btn-info btn-sm"%></td>
+      </tr>
+      <tr>
+        <td><strong>レビュー</strong></td>
+        <td><%= facility.content %></td>
+          <% if facility.user_id == current_user.id %>
+            <td><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success btn-sm"%></td>
+          <% end %>
+      </tr>
+      <tr>
+        <td><strong>タイプ</strong></td>
+        <td><%= facility.types %></td>
+          <% if facility.user_id == current_user.id %>
+            <td><%= link_to '削徐', facility_path(facility.id), class:"btn btn-danger btn-sm",method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
+          <% end %>
+      </tr>
+      <tr>
+        <td><strong>都道府県</strong></td>
+        <td><%= facility.prefecture %></td>
+      </tr>
+      <tr>
+        <td><strong>住所</strong></td>
+        <td><%= facility.address %></td>
+      </tr>
+    </table>
   <% end %>
-
-</table>
+</div>
