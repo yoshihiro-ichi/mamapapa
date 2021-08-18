@@ -7,17 +7,22 @@
 //     margin-right:10%;
 //     }
 table.post_facility{
-  border:1px solid #f0f8ff;
-  background-color: #228b22;
+  background-color: #affadc;
+  border-radius: 10px;
   table-layout: fixed;
-  margin-left: 100px;
-  margin-right: 100px;
+  margin-left: 200px;
+  margin-right: 200px;
+  margin-bottom: 10px;
+  // border-bottom:1px solid #000000;
   }
 
 table.post_facility th{
 text-align: center;
 }
 
+tbody{
+
+}
 
 table.post_facility td{
   // border:1px solid #ffffff;
@@ -28,7 +33,7 @@ td{
 }
 tr{
   sborder:1px solid #000000;
-  background-color: #228b22
+  background-color: #affadc;
 }
 input[type=file]{
 margin: 0 auto;
