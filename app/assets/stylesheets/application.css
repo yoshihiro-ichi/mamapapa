@@ -14,30 +14,28 @@
  *= require_self
  /*ページネーション自体のデザイン*/
  .pagination>li>a {
-   border: none;     /*枠線をなくす*/
-   color: #696969;   /*文字の色を変える*/
+   border: none;
+   color: #696969;
  }
 
- /* 表示しているページ番号のデザイン */
+
  .pagination>.active>a {
-   background: #93c9ff;     /*背景の色を変える*/
-   border-radius: 15px;     /*角を丸くする*/
+   background: #93c9ff;
+   border-radius: 15px;
  }
 
- /*ホバー時のデザイン*/
+
  .pagination>li>a:hover {
-   border-radius: 15px;    /*角を丸くする*/
+   border-radius: 15px;
  }
  body{
   text-align: center;
   font-size: 1.5rem;
   padding-bottom: 100px;
-  /* font-family: var(--bs-font-sans-serif); */
   font-family: "筑紫A丸ゴシック";
   margin: 0;
   padding: 0;
   background-size: cover;
-  background-color: #993c29;
   }
  header{
   text-align: center;
@@ -48,4 +46,3 @@
     bottom: 0; /*下に固定*/
     background-color: #cd853f;
   }
-}
