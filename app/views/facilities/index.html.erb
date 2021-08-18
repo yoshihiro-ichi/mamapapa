@@ -13,7 +13,7 @@
 </div>
 <div class="contents">
   <% @facilities.each do |facility|%>
-    <table class="post_facility" style = "width:60%">
+    <table class="post_facility" >
       <tr>
         <th rowspan="7"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></th>
       </tr>
@@ -27,15 +27,15 @@
         <td><%= link_to '詳細へ', facility_path(facility.id), class:"btn btn-info btn-sm"%></td>
       </tr>
       <tr>
-        <td><strong>レビュー</strong></td>
-        <td><%= facility.content %></td>
+        <td><strong>タイプ</strong></td>
+        <td><%= facility.types %></td>
           <% if facility.user_id == current_user.id %>
             <td><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success btn-sm"%></td>
           <% end %>
       </tr>
       <tr>
-        <td><strong>タイプ</strong></td>
-        <td><%= facility.types %></td>
+        <td><strong>住所</strong></td>
+        <td><%= facility.address %></td>
           <% if facility.user_id == current_user.id %>
             <td><%= link_to '削徐', facility_path(facility.id), class:"btn btn-danger btn-sm",method: :delete,data:{ confirm: '本当に削除していいですか？' } %></td>
           <% end %>
@@ -45,8 +45,8 @@
         <td><%= facility.prefecture %></td>
       </tr>
       <tr>
-        <td><strong>住所</strong></td>
-        <td><%= facility.address %></td>
+        <td><strong>レビュー</strong></td>
+        <td class="contents"><%= facility.content %></td>
       </tr>
     </table>
   <% end %>
