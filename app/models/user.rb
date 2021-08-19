@@ -5,7 +5,7 @@ class User < ApplicationRecord
   validates :name, presence: true, length:{ maximum: 20 }
   validates :email, presence: true,length:{ maximum: 250 }
   validates :encrypted_password, presence: true,length:{ minimum:6 }
-  has_many :facilities
+  has_many :facilities,dependent: :destroy
   has_many :favorites, dependent: :destroy
   has_many :comments, dependent: :destroy
   devise :database_authenticatable, :registerable,
