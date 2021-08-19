@@ -1,9 +1,12 @@
 class CommentsController < ApplicationController
  before_action :set_facility, only: [:create, :edit, :update]
+ before_action :authenticate_user!
   def create
     @comment = @facility.comments.build(comment_params)
+    @comment.user_id = current_user.id
     respond_to do |format|
-      if @facility.save
+      if @comment.save
+# binding.pry
         format.js{render :index}
       else
         format.html{ redirect_to facility_path(@facility),notice:'投稿できませんでした'}
@@ -41,7 +44,7 @@ class CommentsController < ApplicationController
   end
   private
   def comment_params
-    params.require(:comment).permit(:facility_id, :content,)
+    params.require(:comment).permit(:facility_id, :user_id,:content)
   end
   def set_facility
     @facility = Facility.find(params[:facility_id])

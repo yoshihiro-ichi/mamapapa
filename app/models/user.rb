@@ -7,6 +7,7 @@ class User < ApplicationRecord
   validates :encrypted_password, presence: true,length:{ minimum:6 }
   has_many :facilities
   has_many :favorites, dependent: :destroy
+  has_many :comments, dependent: :destroy
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
   def self.guest

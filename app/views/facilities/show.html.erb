@@ -22,17 +22,13 @@
   <strong>住所</strong>
   <%= @facility.address  %>
 </p>
-<div class="container">
-  <div class="blog-text">
-    <p><strong>タイトル</strong>：<%= @facility.title %></p>
-    <p><strong>内容</strong>：<%= @facility.content %></p>
-  </div>
   <div id="comments_area">
    <%= render partial: 'comments/index', locals: { comments: @comments, facility: @facility } %>
   </div>
   <%= render partial: 'comments/form', locals: { comment: @comment, facility: @facility } %>
-<%=link_to "#{@facility.user.name}", user_path(@facility.user.id) %>
-<% unless @facility.user_id == current_user.id %>
+  <%=link_to "#{@facility.user.name}", user_path(@facility.user.id) %>
+  <% unless @facility.user_id == current_user.id %>
+
   <% if @favorite.present? %>
     <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>
   <% else %>
