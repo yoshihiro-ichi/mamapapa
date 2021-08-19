@@ -12,12 +12,12 @@ div.contents{
 }
 
 table.post_facility{
-  background-color: #affadc;
-  border-radius: 5px;
+  background-color:#24b33c;
+  border-radius: 30px;
   table-layout: fixed;
-  margin-left: 200px;
-  margin-right: 200px;
+  margin: 0 auto;
   margin-bottom: 10px;
+  width: 70%;
   // border-bottom:1px solid #000000;
 }
 
@@ -29,10 +29,6 @@ text-align: center;
 
 table.post_facility td{
   // border:1px solid #ffffff;
-}
-
-td{
-// border:1px solid #000000;
 }
 tr{
   sborder:1px solid #000000;
