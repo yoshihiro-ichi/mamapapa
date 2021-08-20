@@ -5,6 +5,7 @@ FactoryBot.define do
     content { 'テスト1' }
     prefecture{ '東京' }
     address{ '昭島市'}
+    types{'屋内'}
     association:user
   end
 # （存在しないクラス名の名前をつける場合、オプションで「このクラスのテストデータにしてください」と指定します）
@@ -13,6 +14,7 @@ FactoryBot.define do
     content { 'コンテント２' }
     prefecture{'埼玉'}
     address{ '朝霞市' }
+    types{'屋外'}
   end
   factory :facility3, class: Facility do
     title { 'タイトル3' }

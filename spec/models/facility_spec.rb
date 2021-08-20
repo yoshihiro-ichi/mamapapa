@@ -1,5 +1,6 @@
 require 'rails_helper'
-describe '施設モデル機能', type: :model do
+
+Rspec.describe 'Facility', type: :model do
   let!(:user) {create(:user)}
   let!(:facility) {create(:facility, user_id: user.id)}
 
@@ -22,7 +23,7 @@ describe '施設モデル機能', type: :model do
         expect(facility).to be_invalid
       end
     end
-    context 'コンテントが300文字以上の場合' do
+    context 'レビューが300文字以上の場合' do
       it 'バリデーションエラーになる' do
         facility.content = 'a'*301
         expect(facility).to be_invalid

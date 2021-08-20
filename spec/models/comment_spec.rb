@@ -1,8 +1,8 @@
 require 'rails_helper'
 RSpec.describe Comment, type: :model do
-  describe 'commentモデル機能' do
-    context 'バリデーションのテスト' do
-      it 'コメントが未入力の場合' do
+  describe 'バリテーションテスト' do
+    context 'コメントが未入力の場合' do
+      it 'バリテーションを通らない' do
         user2 = create(:user2)
         facility= create(:facility)
         #userとアソシエーションしているため:factoryにuserも含んでいる
