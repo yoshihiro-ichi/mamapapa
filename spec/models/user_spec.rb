@@ -40,7 +40,7 @@ RSpec.describe 'User', type: :model do
 
     it 'emailが250文字以上の場合バリテーションを通らない' do
       @user.email = 'a'*251
-      expect(@user.vaild?).to eq(false)
+      expect(@user.valid?).to eq(false)
     end
 
     it 'パスワードが６文字以下の場合バリテーションを通らない' do
