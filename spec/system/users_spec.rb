@@ -37,11 +37,25 @@ RSpec.describe 'User関連機能', type: :system do
     end
     context 'emailとpasswordが一致しない場合' do
        it 'ログインできない' do
-         click_on "ログイン"
+        click_on "ログイン"
         fill_in "user[email]",with: "yoshi@a.com"
         fill_in "user[password]", with: "987654"
         click_on "commit"
         expect(page).to have_content 'メールアドレスまたはパスワードが違います。'
+      end
+    end
+    context 'ゲストログインを選ぶと' do
+      it 'ゲストログインとして入力なしでログインできる' do
+       find('.guest').click
+       expect(page).to have_content "ゲストユーザーとしてログインしました。"
+       expect(page).to have_no_content"管理画面へ"
+      end
+    end
+    context '管理者ログインを選ぶと' do
+        it '管理者として入力なしでログインできる' do
+         find('.admin').click
+         expect(page).to have_content "管理ユーザーとしてログインしました。"
+         expect(page).to have_content "管理画面へ"
       end
     end
   end
