@@ -30,8 +30,16 @@ RSpec.describe '施設投稿機能', type: :system do
       end
     end
   end
-  befor do visit
-
+  before  do
+    visit facilities_path
+  end
+  describe '一覧表示機能' do
+    context '一覧画面に移行した場合' do
+      it '作成済みのタスク一覧が表示される' do
+        ecpect(page).to have_content '喫茶ロード'
+      end
+    end
+  end
 
 
 
