@@ -15,11 +15,13 @@ FactoryBot.define do
     prefecture{'埼玉'}
     address{ '朝霞市' }
     types{'屋外'}
+    association:user,factory: :user2
   end
   factory :facility3, class: Facility do
     title { 'タイトル3' }
     content { 'コンテント3' }
     prefecture{'神奈川'}
     address{ '相模原' }
+    association:user,factory: :user3
   end
 end
