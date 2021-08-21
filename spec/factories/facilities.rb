@@ -24,4 +24,11 @@ FactoryBot.define do
     address{ '相模原' }
     association:user,factory: :user3
   end
+  factory :facility4, class: Facility do
+    title { 'タイトル4' }
+    content { 'コンテント4' }
+    prefecture{'東京'}
+    address{ '昭島市' }
+    association:user,factory: :user4
+  end
 end
