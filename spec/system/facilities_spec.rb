@@ -30,7 +30,7 @@ RSpec.describe '施設投稿機能', type: :system do
       end
     end
   end
-
+  befor do visit
 
 
 
