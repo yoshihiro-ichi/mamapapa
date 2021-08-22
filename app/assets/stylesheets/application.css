@@ -46,9 +46,9 @@
   .container {
     position: relative;
     min-height: 100vh;
-    box-sizing: border-box;
     margin: 0 auto;
     padding: 0 0 120px;
+    width: 100%
   }
  h1.text-center{
  margin-top: 0;
