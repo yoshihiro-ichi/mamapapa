@@ -30,13 +30,9 @@ RSpec.describe '施設投稿機能', type: :system do
       end
     end
   end
-  before  do
-    visit facilities_path
-  end
   describe '一覧表示機能' do
     context '一覧画面に移行した場合' do
       it '作成済みの施設一覧が表示される' do
-        visit facilities_path
         expect(page).to have_content '喫茶ロード'
       end
     end
@@ -51,11 +47,11 @@ RSpec.describe '施設投稿機能', type: :system do
     context '任意の施設詳細画面に移行した場合' do
       it '該当のタスク内容が表示される' do
         click_on "詳細へ", match: :first
-        sleep 0.5
-        expect(page).to have_content '喫茶ロード'
+        expect(page).to have_content 'タイトル4'
       end
     end
   end
+
   context '施設を入力しなかった場合' do
    it '画面遷移されずエラー文が表示される' do
      click_link '新規投稿'
@@ -78,7 +74,7 @@ RSpec.describe '施設投稿機能', type: :system do
         click_on "詳細へ",match: :first
         click_on "お気に入りする"
         click_on "詳細へ",match: :first
-        click_on "お気に入り解除する"
+        click_on "お気に入り解除する"      
         expect(page).to have_content 'お気に入り解除しました'
       end
     end
