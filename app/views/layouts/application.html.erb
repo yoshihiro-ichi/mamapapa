@@ -18,13 +18,14 @@
           <%= link_to 'プロフィール', user_path(current_user.id)%>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           <%if current_user.try(:admin?)%>
-            <%= link_to '管理画面へ', rails_admin_path%>
+            <span class="adomin_root"><%= link_to '管理画面へ', rails_admin_path%></span>
           <%end%>
         <% else %>
           <%= link_to "新規登録", new_user_registration_path %>
           <%= link_to "ログイン", new_user_session_path %>
-          <%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>
-          <%= link_to '管理ユーザーログイン', users_admin_guest_sign_in_path, method: :post %>
+         <span class= "guest"><%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>  </span>
+
+          <span class="admin"><%= link_to '管理ユーザーログイン', users_admin_guest_sign_in_path, method: :post %></span>
         <% end %>
       </header>
         <% if notice %>
