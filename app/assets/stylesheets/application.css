@@ -13,7 +13,8 @@
  *= require_tree .
  *= require_self
  /*ページネーション自体のデザイン*/
- .pagination>li>a {
+ 
+.pagination>li>a {
    border: none;
    color: #696969;
  }
@@ -38,9 +39,21 @@
   background-size: cover;
   }
  header{
+  margin-top: 0;
   text-align: center;
   background-color: #cd853f;
   }
+  .container {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 0 120px;
+  }
+ h1.text-center{
+ margin-top: 0;
+}
+
   footer{
     text-align: center;
     bottom: 0; /*下に固定*/
