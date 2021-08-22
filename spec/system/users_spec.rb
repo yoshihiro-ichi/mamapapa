@@ -44,18 +44,25 @@ RSpec.describe 'User関連機能', type: :system do
         expect(page).to have_content 'メールアドレスまたはパスワードが違います。'
       end
     end
-    context 'ゲストログインを選ぶと' do
+    context 'ゲストログインを選んだ場合' do
       it 'ゲストログインとして入力なしでログインできる' do
        find('.guest').click
        expect(page).to have_content "ゲストユーザーとしてログインしました。"
        expect(page).to have_no_content"管理画面へ"
       end
     end
-    context '管理者ログインを選ぶと' do
-        it '管理者として入力なしでログインできる' do
-         find('.admin').click
-         expect(page).to have_content "管理ユーザーとしてログインしました。"
-         expect(page).to have_content "管理画面へ"
+    context '管理者ログインを選選んだ場合' do
+      it '管理者として入力なしでログインできる' do
+       find('.admin').click
+       expect(page).to have_content "管理ユーザーとしてログインしました。"
+       expect(page).to have_content "管理画面へ"
+      end
+    end
+    context '管理者としてログインすると' do
+      it '管理者画面へアクセスすることができる' do
+       find('.admin').click
+       find(".adomin_root").click
+       expect(page).to have_content 'サイト管理'
       end
     end
   end

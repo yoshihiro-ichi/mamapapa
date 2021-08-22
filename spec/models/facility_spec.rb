@@ -1,6 +1,6 @@
 require 'rails_helper'
 
-Rspec.describe 'Facility', type: :model do
+RSpec.describe 'Facility', type: :model do
   let!(:user) {create(:user)}
   let!(:facility) {create(:facility, user_id: user.id)}
 
@@ -10,7 +10,6 @@ Rspec.describe 'Facility', type: :model do
         expect(facility).to be_valid
       end
     end
-
     context '施設名が20文字以上の場合' do
       it 'バリデーションエラーとなる' do
         facility.title = 'a'*21

@@ -18,7 +18,7 @@
           <%= link_to 'プロフィール', user_path(current_user.id)%>
           <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
           <%if current_user.try(:admin?)%>
-            <%= link_to '管理画面へ', rails_admin_path%>
+            <span class="adomin_root"><%= link_to '管理画面へ', rails_admin_path%></span>
           <%end%>
         <% else %>
           <%= link_to "新規登録", new_user_registration_path %>

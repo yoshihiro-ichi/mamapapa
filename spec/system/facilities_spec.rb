@@ -51,6 +51,7 @@ RSpec.describe '施設投稿機能', type: :system do
     context '任意の施設詳細画面に移行した場合' do
       it '該当のタスク内容が表示される' do
         click_on "詳細へ", match: :first
+        sleep 0.5
         expect(page).to have_content '喫茶ロード'
       end
     end
