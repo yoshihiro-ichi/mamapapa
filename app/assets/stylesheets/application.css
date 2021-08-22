@@ -12,31 +12,7 @@
  *= require bootstrap/dist/css/bootstrap.min
  *= require_tree .
  *= require_self
- // // スマホサイズ
- // @media (max-width: 767px) {
- //   p {
- //     color: red;
- //   }
- // }
- // // タブレットサイズ
- // @media (min-width: 768px) and (max-width: 991px) {
- //   p {
- //     color: blue;
- //   }
- // }
- // // PCサイズ
- // @media (min-width: 992px) and (max-width: 1199px) {
- //   p {
- //     color: yellow;
- //   }
- // }
- // // 大きなPCサイズ
- // @media (min-width: 1200px) {
- //   p {
- //     color: pink;
- //   }
- // } /*ページネーション自体のデザイン*/
-
+ /*ページネーション自体のデザイン*/
 
 .pagination>li>a {
    border: none;
@@ -63,11 +39,25 @@
   background-size: cover;
   }
  header{
+  margin-top: 0;
   text-align: center;
   background-color: #cd853f;
   }
+  .container {
+    position: relative;
+    min-height: 100vh;
+    box-sizing: border-box;
+    margin: 0 auto;
+    padding: 0 0 120px;
+  }
+ h1.text-center{
+ margin-top: 0;
+}
+
   footer{
     text-align: center;
+    position: absolute;
     bottom: 0; /*下に固定*/
     background-color: #cd853f;
+    width: 100%;
   }
