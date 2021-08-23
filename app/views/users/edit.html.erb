@@ -1,6 +1,7 @@
+<%= render "devise/shared/error_messages", resource: resource %>
 <%= form_with model: @user, url:user_path do |f| %>
   <div class="field">
-    <%= f.label :image %>
+    <p><%= f.label :image %></p>
     <%= image_tag @user.image.url if @user.image && @user.image.url %>
     <%= f.file_field :image %>
     <%= f.hidden_field :image_cache %>
