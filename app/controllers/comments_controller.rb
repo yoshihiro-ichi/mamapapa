@@ -1,6 +1,11 @@
 class CommentsController < ApplicationController
  before_action :set_facility, only: [:create, :edit, :update]
  before_action :authenticate_user!
+
+def index
+  @comments = Cmment.all.order(created_at: :desc)
+end
+
   def create
     @comment = @facility.comments.build(comment_params)
     @comment.user_id = current_user.id
