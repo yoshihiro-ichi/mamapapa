@@ -24,7 +24,7 @@
   </div>
   <div class="prefecture">
     <br><%= form.label :prefecture%>
-    <br><%= form.text_field :prefecture,placeholder:"都道府県を入力" %>
+    <br><%= form.select :prefecture, Facility.prefectures.keys, {} %>
   </div>
   <div class="address">
     <br><%= form.label :address%>
