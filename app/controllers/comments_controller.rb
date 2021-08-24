@@ -13,8 +13,8 @@ class CommentsController < ApplicationController
       end
     end
   end
-  def edit
 
+  def edit
    @comment = @facility.comments.find(params[:id])
     respond_to do |format|
      flash.now[:notice] = 'コメントの編集中'
