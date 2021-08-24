@@ -1,5 +1,5 @@
 <% if @facility.errors.any? %>
-  <div id="error_explanation">
+  <div id="error_explanation" class="alert alert-danger">
     <h2><%= @facility.errors.count %>件のエラーがあります。</h2>
     <ul style="list-style:none">
     <% @facility.errors.full_messages.each do |msg| %>

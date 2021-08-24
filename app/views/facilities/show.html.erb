@@ -1,38 +1,39 @@
 <h1>施設詳細</h1>
-<p>
-<%= image_tag (@facility.image.url)if @facility.image && @facility.image.url %>
-</p>
-<p>
-  <strong>施設名</strong>
-  <%= @facility.title %>
-</p>
-<p>
-  <strong> レビュー</strong>
-  <%= @facility.content %>
-</p>
-<p>
-  <strong> タイプ</strong>
-  <%= @facility.types %>
-</p>
-<p>
-  <strong>都道府県</strong>
-  <%= @facility.prefecture  %>
-</p>
-<p>
-  <strong>住所</strong>
-  <%= @facility.address  %>
-</p>
-  <div id="comments_area">
-   <%= render partial: 'comments/index', locals: { comments: @comments, facility: @facility } %>
-  </div>
-  <%= render partial: 'comments/form', locals: { comment: @comment, facility: @facility } %>
-  <%=link_to "#{@facility.user.name}", user_path(@facility.user.id) %>
-  <% unless @facility.user_id == current_user.id %>
-    <% if @favorite.present? %>
+  <div class="show_contets">
+      <p>
+        <%= image_tag (@facility.image.url)if @facility.image && @facility.image.url %>
+      </p>
+      <p>
+        <strong>施設名</strong>
+        <%= @facility.title %>
+      </p>
+      <p>
+        <strong> レビュー</strong>
+        <%= @facility.content %>
+      </p>
+      <p>
+        <strong> タイプ</strong>
+        <%= @facility.types %>
+      </p>
+      <p>
+        <strong>都道府県</strong>
+        <%= @facility.prefecture  %>
+      </p>
+      <p>
+        <strong>住所</strong>
+        <%= @facility.address  %>
+      </p>
+      <div id="comments_area">
+        <%= render partial: 'comments/index', locals: { comments: @comments, facility: @facility } %>
+      </div>
+      <%= render partial: 'comments/form', locals: { comment: @comment, facility: @facility } %>
+      <%=link_to "#{@facility.user.name}", user_path(@facility.user.id) %>
+      <% unless @facility.user_id == current_user.id %>
+      <% if @favorite.present? %>
       <%= link_to 'お気に入り解除する', favorite_path(id: @favorite.id), method: :delete, class: 'btn btn-danger' %>
-    <% else %>
+      <% else %>
       <%= link_to 'お気に入りする', favorites_path(facility_id: @facility.id), method: :post, class: 'btn btn-primary' %>
-    <% end %>
-<% end %>
-
-<%= link_to '戻る', facilities_path,class: 'btn btn-danger'%>
+      <% end %>
+      <% end %>
+      <%= link_to '戻る', facilities_path,class: 'btn btn-danger'%>
+  </div>
