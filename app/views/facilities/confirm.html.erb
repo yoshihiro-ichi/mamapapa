@@ -9,6 +9,9 @@
   <%= form.hidden_field :image_cache %>
   <p>タイトル:<%= @facility.title %></p>
   <p>本文:<%= @facility.content %></p>
+  <p>施設タイプ<%= @facility.types %></p>
+  <p>都道府県<%= @facility.prefecture %></p>
+  <p>住所<%= @facility.address %></p>
   <%= form.submit  "登録する" %>
   <%= form.submit "戻る" ,name:'back' %>
 <% end %>
