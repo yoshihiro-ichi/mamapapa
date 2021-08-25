@@ -1,16 +1,8 @@
-
-
 <%= form_with(model: [facility, comment]) do |form| %>
-  <% if comment.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(comment.errors.count, "error") %> prohibited this comment from being saved:</h2>
-      <ul>
-      <% comment.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
+<div id="comments-error">
+   <%= render 'layouts/error_messages.html.erb', model: form.object %>
+</div>
+
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content %>

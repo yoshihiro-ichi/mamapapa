@@ -1,4 +1,4 @@
-<p class="notice"><%= alert %></p>
+<p class="notice"><%= notice %></p>
 <%= form_with(model: [facility, comment],local: false) do |form| %>
   <% if comment.errors.any? %>
     <div id="error_explanation">
