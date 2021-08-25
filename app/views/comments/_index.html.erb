@@ -1,4 +1,8 @@
-<p class="notice"><%= alert %></p>
+<p class="notice"><%= notice %></p>
+<div id="comments-error">
+   <%= render 'comments/error_messages', model: @comment %>
+
+</div>
 <ul >
   <strong>コメント欄</strong>
   <% comments.each do |comment| %>
