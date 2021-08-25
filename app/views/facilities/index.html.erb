@@ -3,7 +3,7 @@
   <%= search_form_for @q, url: search_facilities_path do |f| %>
     <strong><%= f.label :title_cont, '施設名・住所' %></strong>
     <strong><%= f.search_field :title_cont,placeholder:"施設名を入力" %></strong>
-    <strong><%= f.search_field :prefecture_cont,placeholder:"都道府県を入力" %></strong>
+    <strong><%= f.number_field :prefecture_cont,placeholder:"都道府県を入力" %></strong>
     <strong><%= f.search_field :address_cont,placeholder:"住所を入力" %></strong>
     <strong><%= f.submit '検索' %></strong>
   <% end %>

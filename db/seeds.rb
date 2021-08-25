@@ -10,7 +10,7 @@ User.all.each do |user|
   user.facilities.create!(
     title:'testfacility',
     content:'とてもいいところ',
-    prefecture:'国分寺',
+    prefecture:'東京都',
     address:'本町',
     image:File.open('./app/assets/images/download.jpg'),
     types:'屋外'
@@ -18,5 +18,5 @@ User.all.each do |user|
 end
 Favorite.create!(
     user_id: User.first.id,
-    post_id: Post.first.id,
+    facility_id: Facility.first.id,
     )
