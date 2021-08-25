@@ -17,14 +17,14 @@ RSpec.describe '施設投稿機能', type: :system do
         visit new_facility_path
         fill_in 'facility[title]', with: '喫茶ロード'
         fill_in 'facility_content', with: 'テスト1'
-        fill_in 'facility_prefecture',with: '東京'
+        fill_in 'facility_prefecture',with: '東京都'
         fill_in 'facility_address',with: '昭島市'
         fill_in 'facility_types' ,with: '屋内'
         click_button '登録する'
         visit facilities_path
         expect(page).to have_content '喫茶ロード'
         expect(page).to have_content 'テスト1'
-        expect(page).to have_content '東京'
+        expect(page).to have_content '東京都'
         expect(page).to have_content '昭島市'
         expect(page).to have_content '屋内'
       end
@@ -74,7 +74,7 @@ RSpec.describe '施設投稿機能', type: :system do
         click_on "詳細へ",match: :first
         click_on "お気に入りする"
         click_on "詳細へ",match: :first
-        click_on "お気に入り解除する"      
+        click_on "お気に入り解除する"
         expect(page).to have_content 'お気に入り解除しました'
       end
     end
@@ -111,7 +111,7 @@ RSpec.describe '施設投稿機能', type: :system do
         fill_in "facility[title]",with: "test"
         fill_in "facility[content]",with: "test"
         fill_in "facility[types]",with: "test"
-        fill_in "facility[prefecture]",with: "test"
+        fill_in "facility[prefecture]",with: "神奈川県"
         fill_in "facility[address]",with: "test"
         click_on "commit"
         expect(page).to have_content'test'
