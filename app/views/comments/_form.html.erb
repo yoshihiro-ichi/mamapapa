@@ -1,8 +1,4 @@
 <%= form_with(model: [facility, comment]) do |form| %>
-<div id="comments-error">
-   <%= render 'layouts/error_messages.html.erb', model: form.object %>
-</div>
-
   <div class="field">
     <%= form.label :content %>
     <%= form.text_area :content %>
