@@ -6,18 +6,25 @@
 //     margin-left:10%;
 //     margin-right:10%;
 //     }
-
 div.contents{
-  background-color: #993c29;
+  background-color: #ffffff;
+  height: 500px;
+  border-radius: 30px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  overflow-x: scroll;
 }
 
 table.post_facility{
+  min-width: 250px;
   background-color:#24b33c;
   border-radius: 30px;
   table-layout: fixed;
   margin: 0 auto;
   margin-bottom: 10px;
-  width: 70%;
+  width: 90%;
+  
   // border-bottom:1px solid #000000;
 }
 
