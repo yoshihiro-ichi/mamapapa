@@ -14,8 +14,12 @@
 <div class="contents">
   <% @facilities.each do |facility|%>
     <table class="post_facility" >
-      <tr>
-        <th rowspan="7"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></th>
+        <tr>
+          <% if facility.image? %>
+            <th rowspan="7"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></th>
+          <% else %>
+            <th rowspan="7"><%= image_tag "noimagefuukei.png", class:"facility_index_icon" %>
+          <% end %>
       </tr>
       <tr>
         <td><strong>投稿者</strong></td>
