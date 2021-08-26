@@ -1,7 +1,5 @@
-<p class="notice"><%= notice %></p>
 <div id="comments-error">
    <%= render 'comments/error_messages', model: @comment %>
-
 </div>
 <ul >
   <strong>コメント欄</strong>
@@ -10,7 +8,7 @@
       <li>
         <div class="comment-content" id ="this_comment_<%= comment.id %>"></div>
           <span><%= comment.content %></span>
-                <%= comment.user.name %>
+          <span><%= comment.user.name %></span>
         <% if current_user == comment.user %>
          <span><%= link_to "編集", edit_facility_comment_path(facility, comment), remote: true %></span>
          <span><%= link_to "削除", facility_comment_path(comment.facility_id, comment.id), method: :delete, remote: true,

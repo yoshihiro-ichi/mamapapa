@@ -24,7 +24,7 @@ table.post_facility{
   margin: 0 auto;
   margin-bottom: 10px;
   width: 90%;
-  
+
   // border-bottom:1px solid #000000;
 }
 
@@ -43,5 +43,16 @@ tr{
 }
 input[type=file]{
 margin: 0 auto;
-padding-left: 200px;
+padding-left: 800px;
 }
+
+.user_show_icon{
+width: 200px;
+}
+.facility_index_icon{
+width: 150px;
+height: 130px;
+border-radius: 100px;
+}
+//userの写真の大きさ
+//施設投稿一覧の写真の大きさ
