@@ -12,6 +12,11 @@
     <p><%= link_to 'プロフィール編集', edit_user_path(@user.id) , class: 'btn btn-primary'%></p>
     <% end %>
     <p><%= link_to 'お気に入り一覧へ',  favorites_path,class:"btn btn-info" %></p>
+    <% unless @user == current_user %>
+      <%= render 'follow_form', user:@user %>
+    <% end %>
+    <%= link_to "フォロー:#{@user.following.count}", following_user_path(@user) %>
+      <%= link_to "フォロワー:#{@user.followers.count}", followers_user_path(@user) %>
 
 <% if current_user.facility_ids.blank? %>
   <p>↓↓下記に投稿が表示されます↓↓</p>

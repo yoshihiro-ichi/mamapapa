@@ -17,6 +17,7 @@
       <%= link_to '新規投稿', new_facility_path%>
       <%= link_to 'プロフィール', user_path(current_user.id)%>
       <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
+      <%= link_to 'ユーザー一覧', users_path %>
       <%if current_user.try(:admin?)%>
       <span class="adomin_root"><%= link_to '管理画面へ', rails_admin_path%></span>
       <%end%>
