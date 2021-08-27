@@ -47,7 +47,7 @@
     position: relative;
     min-height: 100vh;
     margin: 0 auto;
-    padding: 0 0 120px;
+    padding: 0 0 50px;
     width: 100%
   }
  h1.text-center{
@@ -58,6 +58,6 @@
     text-align: center;
     position: absolute;
     bottom: 0; /*下に固定*/
-    background-color: #cd853f;
     width: 100%;
+    margin-top: 30px
   }
