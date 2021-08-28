@@ -11,24 +11,23 @@
 <body>
   <div class="container">
     <header>
-    <%= link_to  top_index_path do %>
+    <%= link_to  top_index_path,class:"link" do %>
       <h1 class="text-center" calss="title" style= "font-family:Homemade Apple,cursive;">MamaPama</h1>
     <% end%>
       <% if user_signed_in? %>
-      <%= link_to "HOME", facilities_path %>
-      <%= link_to '新規投稿', new_facility_path%>
-      <%= link_to 'プロフィール', user_path(current_user.id)%>
-      <%= link_to "ログアウト", destroy_user_session_path, method: :delete %>
-      <%= link_to 'ユーザー一覧', users_path %>
+      <%= link_to '新規投稿', new_facility_path, class: "link" %>
+      <%= link_to 'プロフィール', user_path(current_user.id), class:"link"%>
+      <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"link" %>
+      <%= link_to 'お気に入りにした投稿', favorites_path, class:"link" %>
       <%if current_user.try(:admin?)%>
-      <span class="adomin_root"><%= link_to '管理画面へ', rails_admin_path%></span>
+      <span class="adomin_root"><%= link_to '管理画面へ', rails_admin_path,class:"link"%></span>
       <%end%>
       <% else %>
-      <%= link_to "新規登録", new_user_registration_path %>
-      <%= link_to "ログイン", new_user_session_path %>
-      <span class= "guest"><%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post %>  </span>
+      <%= link_to "新規登録", new_user_registration_path, class: "link" %>
+      <%= link_to "ログイン", new_user_session_path,class:"link" %>
+      <span class= "guest"><%= link_to 'ゲストログイン（閲覧用）', users_guest_sign_in_path, method: :post, class:"link" %>  </span>
 
-      <span class="admin"><%= link_to '管理ユーザーログイン', users_admin_guest_sign_in_path, method: :post %></span>
+      <span class="admin"><%= link_to '管理ユーザーログイン', users_admin_guest_sign_in_path, method: :post, class:"link"%></span>
       <% end %>
     </header>
     <% if notice %>
