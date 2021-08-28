@@ -1,3 +1,22 @@
 // Place all the styles related to the Messages controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+div.ui.segment{
+height: 500px;
+background-image: image-url('pastel_00026.jpg');
+background-size: cover;
+}
+.right.triangle.icon{
+text-align: left;
+font-size: 2rem;
+background-color: #14cc14;
+border-radius: 10px;
+margin-right:10px;
+}
+
+div.item{
+// margin-right: 500px
+}
+div.message_content{
+margin-right: 500px;
+}
