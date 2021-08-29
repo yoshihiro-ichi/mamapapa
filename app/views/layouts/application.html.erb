@@ -18,8 +18,9 @@
         <%= link_to "HOME", facilities_path,class: "link" %>
         <%= link_to '新規投稿', new_facility_path, class: "link" %>
         <%= link_to 'プロフィール', user_path(current_user.id), class:"link"%>
-        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"link" %>
         <%= link_to 'お気に入りにした投稿', favorites_path, class:"link" %>
+        <%= link_to 'メッセージ一覧', conversations_path, class:"link" %>
+        <%= link_to "ログアウト", destroy_user_session_path, method: :delete, class:"link" %>
         <%if current_user.try(:admin?)%>
           <span class="adomin_root"><%= link_to '管理画面へ', rails_admin_path,class:"link"%></span>
         <%end%>

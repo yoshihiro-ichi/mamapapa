@@ -8,14 +8,14 @@
           <div class="item">
             <div class="content">
               <div class="message_content">
-                  <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
-                  <div class="list">
-                    <div class="item">
-                    <i class="reft triangle icon"> <%= message.body %> </i>
+                  <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %>
                     <% if message.user == current_user %>
-                      <i class="reft triangle icon"></i>
                       <%= message.read ? '既読' : '未読' %>
                     <% end %>
+                  </div>
+                  <div class="list">
+                    <div class="item">
+                      <div class="m-body"><i class="reft triangle icon"> <%= message.body %> </i> </div>
                   </div>
                 </div>
               </div>
@@ -27,10 +27,10 @@
               <div class="item-right">
                 <div class="content">
                   <div class="message_content-right">
-                    <div class="header-right"><strong><%= message.user.name %></strong> <%= message.message_time %></div>
+                    <div class="header-right"><strong><%= message.user.name  %></strong> <%= message.message_time %></div>
                       <div class="list-right">
                         <div class="item-right">
-                          <i class="right triangle icon"> <%= message.body %> </i>
+                          <div class="m-body-right"><i class="right triangle icon"> <%= message.body %>  </div> </i>
                           <% if message.user == current_user %>
                             <i class="right triangle icon"></i>
                             <%= message.read ? '既読' : '未読' %>

@@ -4,29 +4,70 @@
 div.ui.segment{
 overflow-y: scroll;
 height: 500px;
-width: 80%;
-padding-bottom: 20px;
-margin-left: 10%;
-margin-top: 10px;
+width: 60%;
+padding-bottom: 40px;
+margin-left: 20%;
+margin-top: 20px;
 background-image: image-url('pastel_00026.jpg');
 background-size: cover;
+
 }
-.reft.triangle.icon{
-text-align: left;
+// .reft.triangle.icon{
+// width: 200px;
+// text-align: left;
+// font-size: 1.8rem;
+// background-color: #ffffff;
+// border-radius: 10px;
+// margin-right:10px;
+// border-radius: 20px  20px 30px 3px ;
+// }
+// .right.triangle.icon{
+// text-align: right;
+// }
+
+
+div.m-body{
+width: 200px;
+// text-align: left;
 font-size: 1.8rem;
 background-color: #ffffff;
 border-radius: 10px;
 margin-right:10px;
 border-radius: 20px  20px 30px 3px ;
+word-wrap: break-word;
+display:inline-block;
+position: relative;
+right:80px;
 }
 
+div.m-body-right{
+  width: 200px;
+  text-align: right;
+  // float: right;
+  font-size: 2rem;
+  padding:2px 10px ;
+  background-color: #14cc14;
+  border-radius: 10px;
+  margin-right:10px;
+  border-radius: 20px  20px 3px 20px ;
+  word-wrap: break-word;
+  // margin-left: 400px;
+  // margin-right:0px;
+  display:inline-block;
+  position: relative;
+  left: 80px
+}
+
+div.list-right{
+text-align: right;
+}
 
 div.item{
 text-align: left;
 padding-left: 100px
 }
 div.item-right{
-text-align: right;
+text-align: center;
 padding-right: 100px
 }
 
@@ -37,16 +78,6 @@ margin-right: 500px;
 
 div.message_content-right{
 margin-left: 500px;
-}
-.right.triangle.icon{
-text-align: right;
-font-size: 2rem;
-width: 100px;
-padding:2px 10px ;
-background-color: #14cc14;
-border-radius: 10px;
-margin-left:10px;
-border-radius: 20px  20px 3px 20px ;
 }
 .form-control{
 width: 80%;
