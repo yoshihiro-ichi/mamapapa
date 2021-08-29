@@ -2,11 +2,14 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 div.ui.segment{
+overflow-x: scroll;
 height: 500px;
+width: 80%;
+margin-left: 10%;
 background-image: image-url('pastel_00026.jpg');
 background-size: cover;
 }
-.right.triangle.icon{
+.reft.triangle.icon{
 text-align: left;
 font-size: 2rem;
 background-color: #14cc14;
@@ -19,4 +22,15 @@ div.item{
 }
 div.message_content{
 margin-right: 500px;
+}
+
+div.message_content-right{
+margin-left: 500px;
+}
+.right.triangle.icon{
+text-align: right;
+font-size: 2rem;
+background-color: #14cc14;
+border-radius: 10px;
+margin-left:10px;
 }
