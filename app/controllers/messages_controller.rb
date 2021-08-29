@@ -7,7 +7,7 @@ class MessagesController < ApplicationController
   def index
     @messages = @conversation.messages
 
-    if @messages.length > 10
+    if @messages.length > 100
       @over_ten = true
       @messages = Message.where(id: @messages[-10..-1].pluck(:id))
     end
@@ -18,7 +18,7 @@ class MessagesController < ApplicationController
     if @messages.last
       @messages.where.not(user_id: current_user.id).update_all(read: true)
     end
-      @messages = @messages.order(:created_at)
+      @messages = @messages.order(created_at:"DESC")
       @message = @conversation.messages.build
   end
   def create
