@@ -9,7 +9,7 @@
           <tr>
             <% if conversation.target_user(current_user).present? %>
               <% if conversation.target_user(current_user).image? %>
-                <th> <%= image_tag conversation.target_user(current_user).image.thumb.url ,class:'img-circle'%></th>
+                <th> <%= image_tag conversation.target_user(current_user).image.thumb.url, class:'img-circle'%></th>
               <% else %>
                 <th><%= image_tag "noimagehito.png", class:"user_show_icon",class:'img-fluid d-flex img-thumbnail middle-icon history-index-img' ,class:'img-circle'%></th>
               <% end %>
