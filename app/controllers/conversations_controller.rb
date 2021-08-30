@@ -1,7 +1,7 @@
 class ConversationsController < ApplicationController
 before_action :authenticate_user!
   def index
-    @conversations = Conversation.all.page(params[:page]).per(6)
+    @conversations = Conversation.all.order(created_at: :desc).page(params[:page]).per(6)
   end
 
   def create

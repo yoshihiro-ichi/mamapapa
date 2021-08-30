@@ -24,7 +24,8 @@
 <% if @facilities.blank? %>
   <p>↓↓下記に投稿が表示されます↓↓</p>
 <% else %>
-    <p>↓↓投稿一覧↓↓</p>
+  <p>↓↓投稿一覧↓↓</p>
+  <div class="contents">
 
       <% @facilities.each do |facility|%>
         <table class="post_facility" style = "width:60%">
@@ -64,4 +65,5 @@
           </tr>
       </table>
     <% end %>
-  <% end %>
+  </div>
+<% end %>
