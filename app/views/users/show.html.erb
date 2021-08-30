@@ -4,7 +4,7 @@
     <h1><%= @user.name %>のページ</h1>
     <% end %>
     <% if @user.image? %>
-    <p class="img-circle"><%= image_tag(@user.image.url,class:"user_show_icon") if @user.image && @user.image.url %></p>
+    <p class="img-circle"><%= image_tag(@user.image.url, class:"user_show_icon") if @user.image && @user.image.url %></p>
     <% else %>
      <%= image_tag "noimagehito.png", class:"user_show_icon"%>
      <% end %>

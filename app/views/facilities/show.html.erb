@@ -1,7 +1,7 @@
 <h1>施設詳細</h1>
   <div class="show_contets">
         <p>
-        <%= image_tag (@facility.image.url)if @facility.image && @facility.image.url %>
+        <%= image_tag (@facility.image.url), class:"facility-show-img"if @facility.image && @facility.image.url %>
       </p>
       <p>
         <strong>投稿者</strong>

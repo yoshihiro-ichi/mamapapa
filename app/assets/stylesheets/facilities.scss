@@ -61,5 +61,10 @@ width: 150px;
 height: 130px;
 border-radius: 100px;
 }
-//userの写真の大きさ
-//施設投稿一覧の写真の大きさ
+
+.facility-show-img{
+  width: 1000px;
+  height: 800px;
+
+  object-fit:cover;
+}
