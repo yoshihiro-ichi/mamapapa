@@ -4,7 +4,28 @@
 // div.ui.segment{
 // height: 1000px;
 // }
+
+div.conversations{
+background-image: image-url('10179014362.jpg');
+padding-top: 40px
+
+}
+
+
 div.conversation-container{
+ width: 80%;
+ padding: 60px;
+ margin-left: 10%;
+ height:600px;
+ background-image: image-url('37307047.gif');
+ background-size:800px;
+ background-repeat: no-repeat;
+ background-position: center ;
+}
+
+
+
+div.conversation-contents{
   text-align: center;
   width: 80%;
   margin-left: 10%;
@@ -13,13 +34,15 @@ table.conversations{
   width: 50%;
   margin-left: 25%;
   table-layout: fixed;
+  border-bottom: 2px  groove;
 }
 td.conversations{
 font-size: 2rem
 }
 
 img{
-width: 100px;
-height: 100px;
+width: 80px;
+height: 80px;
 object-fit:cover;
+
 }
