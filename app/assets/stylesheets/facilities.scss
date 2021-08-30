@@ -51,13 +51,20 @@ padding-left: 200px;
 }
 
 .user_show_icon{
-width: 500px;
-border: 2px;
+width: 300px;
+height: 300px;
+border-radius: 300px;
+object-fit:cover;
 }
 .facility_index_icon{
 width: 150px;
 height: 130px;
 border-radius: 100px;
 }
-//userの写真の大きさ
-//施設投稿一覧の写真の大きさ
+
+.facility-show-img{
+  width: 1000px;
+  height: 800px;
+
+  object-fit:cover;
+}
