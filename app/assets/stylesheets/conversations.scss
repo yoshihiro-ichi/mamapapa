@@ -4,3 +4,22 @@
 // div.ui.segment{
 // height: 1000px;
 // }
+div.conversation-container{
+  text-align: center;
+  width: 80%;
+  margin-left: 10%;
+  }
+table.conversations{
+  width: 50%;
+  margin-left: 25%;
+  table-layout: fixed;
+}
+td.conversations{
+font-size: 2rem
+}
+
+img{
+width: 100px;
+height: 100px;
+object-fit:cover;
+}
