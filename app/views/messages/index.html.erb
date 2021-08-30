@@ -1,28 +1,29 @@
 <% if @over_ten %>
-  <%= link_to '以前のメッセージ', '?m=all' %>
+<%= link_to '以前のメッセージ', '?m=all' %>
 <% end %>
-<div class="ui segment">
-  <% @messages.each do |message| %>
-      <% if message.user == current_user %>
-        <% if message.body.present? %>
-          <div class="item">
-            <div class="content">
-              <div class="message_content">
-                  <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %>
-                    <% if message.user == current_user %>
-                      <%= message.read ? '既読' : '未読' %>
-                    <% end %>
-                  </div>
-                  <div class="list">
-                    <div class="item">
-                      <div class="m-body"><i class="reft triangle icon"> <%= message.body %> </i> </div>
+<div class="m-container">
+  <div class="ui segment">
+    <% @messages.each do |message| %>
+        <% if message.user == current_user %>
+          <% if message.body.present? %>
+            <div class="item">
+              <div class="content">
+                <div class="message_content">
+                    <div class="header"><strong><%= message.user.name %></strong> <%= message.message_time %>
+                      <% if message.user == current_user %>
+                        <%= message.read ? '既読' : '未読' %>
+                      <% end %>
+                    </div>
+                    <div class="list">
+                      <div class="item">
+                        <div class="m-body"><i class="reft triangle icon"> <%= message.body %> </i> </div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
-          </div>
-        <% end %>
-        <% else%>
+          <% end %>
+          <% else%>
             <% if message.body.present? %>
               <div class="item-right">
                 <div class="content">
@@ -42,7 +43,8 @@
               </div>
             <% end %>
           <% end %>
-  <% end %>
+    <% end %>
+  </div>
 </div>
 
 <%= form_with(model: [@conversation, @message]) do |f| %>
