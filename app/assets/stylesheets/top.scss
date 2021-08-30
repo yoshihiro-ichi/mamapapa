@@ -3,7 +3,7 @@
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .top_content {
   background-image: image-url('pastel_00026.jpg');
-  height: 600px;
+  height: 800px;
   background-size: cover;
   color:#000000;
 }
@@ -13,4 +13,15 @@ padding-top: 30px
 }
 .top_content p{
 font-family: ヒラギノ角ゴシック;
+}
+
+p{
+font-size: 2rem
+}
+
+div.m-container
+{
+background-image:  image-url('10179014362.jpg');
+padding-top: 10px;
+padding-bottom: 30px;
 }
