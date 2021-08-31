@@ -14,10 +14,6 @@
     <br><%= form.label :施設名 %>
     <br><%= form.text_field :title,placeholder:"施設名を入力" %>
   </div>
-  <div class="content">
-    <br><%= form.label :レビュー %>
-    <br><%= form.text_field :content,placeholder:"レビューを入力" %>
-  </div>
   <div class="types">
     <br><%= form.label :施設タイプ%>
     <br><%= form.text_field :types,placeholder:"例：屋外・屋内・病院…" %>
@@ -37,6 +33,10 @@
   <div class="address">
     <br><%= form.label :address%>
     <br><%= form.text_field :address,placeholder:"市町村以下住所を入力" %>
+  </div>
+  <div class="content">
+    <br><%= form.label :レビュー %>
+    <br><%= form.text_field :content,placeholder:"レビューを入力" %>
   </div>
   <div class="image">
     <br><%= form.label :image %>

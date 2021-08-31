@@ -15,13 +15,6 @@
         <td><%= link_to '詳細へ', facility_path(facility.id), class:"btn btn-info btn-sm"%></td>
       </tr>
       <tr>
-        <td><strong>レビュー</strong></td>
-        <td><%= facility.content %></td>
-          <% if facility.user_id == current_user.id %>
-            <td><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success btn-sm"%></td>
-          <% end %>
-      </tr>
-      <tr>
         <td><strong>タイプ</strong></td>
         <td><%= facility.types %></td>
           <% if facility.user_id == current_user.id %>
@@ -35,6 +28,13 @@
       <tr>
         <td><strong>住所</strong></td>
         <td><%= facility.address %></td>
+      </tr>
+      <tr>
+        <td><strong>レビュー</strong></td>
+        <td><%= facility.content %></td>
+          <% if facility.user_id == current_user.id %>
+            <td><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success btn-sm"%></td>
+          <% end %>
       </tr>
     </table>
   <% end %>

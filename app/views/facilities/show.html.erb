@@ -12,10 +12,6 @@
         <%= @facility.title %>
       </p>
       <p>
-        <strong> レビュー</strong>
-        <%= @facility.content %>
-      </p>
-      <p>
         <strong> タイプ</strong>
         <%= @facility.types %>
       </p>
@@ -26,6 +22,10 @@
       <p>
         <strong>住所</strong>
         <%= @facility.address  %>
+      </p>
+      <p>
+        <strong> レビュー</strong>
+        <%= @facility.content %>
       </p>
       <div id="comments_area">
         <%= render partial: 'comments/index', locals: { comments: @comments, facility: @facility } %>
