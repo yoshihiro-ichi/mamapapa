@@ -1,24 +1,27 @@
 <h2><%= t('.sign_in') %></h2>
-
+<br>
+<br>
 <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="field">
     <%= f.label :email %><br />
     <%= f.email_field :email, autofocus: true, autocomplete: "email",placeholder:"アドレスを入力してください"  %>
   </div>
-
+<br>
+<br>
   <div class="field">
     <%= f.label :password %><br />
     <%= f.password_field :password, autocomplete: "current-password",placeholder:"パスワードを入力してください"  %>
   </div>
-
+<br>
+<br>
   <% if devise_mapping.rememberable? %>
     <div class="field">
       <%= f.check_box :remember_me %>
-      <%= f.label :remember_me %>
+      <%= f.label :remember_me, class: "sign_in_label" %>
     </div>
   <% end %>
 
   <div class="actions">
-    <%= f.submit t('.sign_in') %>
+    <%= f.submit t('.sign_in'),class:"devise_in_input" %>
   </div>
 <% end %>
