@@ -47,3 +47,5 @@ end
   gem 'cancancan'
   gem 'ransack', github: 'activerecord-hackery/ransack'
   gem 'kaminari'
+  gem 'geocoder'
+  gem 'dotenv-rails'

@@ -58,8 +58,8 @@
   }
 
 .facility-show-img{
-    width: 1200px;
-    height: 900px;
+    width: 900px;
+    height: 500px;
     object-fit:cover;
   }
 //ここから下フォロー一覧
@@ -112,7 +112,7 @@ div.follower_container{
 img{
   width: 200px;
   height: 200px;
-  border-radius: 30%;
+  // border-radius: 30%;
   object-fit:cover;
 }
 
@@ -137,5 +137,4 @@ padding-right: 300px;
 input.post_subumit{
 width: 150px;
 border-radius: 150px;
-
 }
