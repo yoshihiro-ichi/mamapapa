@@ -51,6 +51,20 @@
   border-radius: 300px;
   object-fit:cover;
   }
+
+  img.index_img{
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  object-fit:cover;
+}
+
+  .index_img:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+}
+
   .facility_index_icon{
   width: 150px;
   height: 130px;
