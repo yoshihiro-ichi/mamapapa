@@ -24,14 +24,7 @@
         <%= @facility.address  %>
       </p>
       <p id="map"> </p>
-      <style>
-        #map{
-          height: 150px;
-          width:270px;
-          
-        }
-      </style>
-      <script type="text/javascript">
+        <script type="text/javascript">
           function initMap() {
 
               var test ={lat: <%= @facility.latitude %>, lng: <%= @facility.longitude %>};
