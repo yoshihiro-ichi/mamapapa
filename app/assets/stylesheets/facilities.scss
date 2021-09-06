@@ -51,6 +51,20 @@
   border-radius: 300px;
   object-fit:cover;
   }
+
+  img.index_img{
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
+  object-fit:cover;
+}
+
+  .index_img:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transform: translateY(-10px);
+  transition-duration: 0.5s;
+}
+
   .facility_index_icon{
   width: 150px;
   height: 130px;
@@ -59,7 +73,7 @@
 
 .facility-show-img{
     width: 900px;
-    height: 900px;
+    height: 500px;
     object-fit:cover;
   }
 //ここから下フォロー一覧
@@ -112,7 +126,7 @@ div.follower_container{
 img{
   width: 200px;
   height: 200px;
-  border-radius: 30%;
+  // border-radius: 30%;
   object-fit:cover;
 }
 
@@ -130,4 +144,11 @@ width: 200px;
 }
 .serch_input{
 width: 200px
+}
+#user_image{
+padding-right: 300px;
+}
+input.post_subumit{
+width: 150px;
+border-radius: 150px;
 }
