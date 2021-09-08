@@ -1,22 +1,8 @@
-<h2 class="text-center">施設投稿一覧</h2>
-<div class="search_field">
-  <%= search_form_for @q, url: search_facilities_path do |f| %>
-    <strong><%= f.label :title_cont, '施設名・住所' %></strong>
-    <strong><%= f.search_field :title_cont,placeholder:"施設名を入力" %></strong>
-    <strong><%= f.search_field :prefecture_cont,placeholder:"都道府県を入力" %></strong>
-    <strong><%= f.search_field :address_cont,placeholder:"住所を入力" %></strong>
-    <strong><%= f.submit '検索' , class:"serch_input" %></strong>
-  <% end %>
-</div>
-<div class="paginate">
-  <strong><%= paginate @facilities %></strong>
-</div>
-<div class="contents">
-  <% @facilities.each do |facility|%>
+
     <table class="post_facility" >
         <tr>
           <% if facility.image? %>
-          <th rowspan="7"><%= image_tag (facility.image.url),class:'index_img' if facility.image && facility.image.url %></th>
+            <th rowspan="7"><%= image_tag (facility.image.url),class:'index_img' if facility.image && facility.image.url %></th>
           <% else %>
             <th rowspan="7"><%= image_tag "noimagefuukei.png", class:"facility_index_icon" %>
           <% end %>
@@ -52,5 +38,3 @@
         <td class="contents"><%= facility.content %></td>
       </tr>
     </table>
-  <% end %>
-</div>

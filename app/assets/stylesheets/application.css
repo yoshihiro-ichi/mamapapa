@@ -12,8 +12,18 @@
 *= require bootstrap/dist/css/bootstrap.min
 *= require_tree .
 *= require_self
-/*ページネーション自体のデザイン*/
+*/
+@media screen and (min-width:1000px){
+  font-size: 10px; }
+}
 
+@media screen and (min-width:600px){
+   font-size: 8px; }
+}
+
+
+
+/* ページネーション自体のデザイン */
 .pagination>li>a {
   border: none;
   color: #696969;
@@ -28,14 +38,6 @@
 
 .pagination>li>a:hover {
   border-radius: 15px;
-}
-
-@media screen and (min-width:960px){
-  * {font-size: 5px; }
-}
-
-@media screen and (min-width:960px){
-  * {font-size: 5px; }
 }
 
 body{
