@@ -1,34 +1,46 @@
 <h1>お気に入り一覧</h1>
-<% @favorites.each do |favorite| %>
-  <table class="post_facility" style = "width:60%">
-    <tr>
-      <th rowspan="7"><%= image_tag (favorite.facility.image.url(:thumb).to_s)if favorite.facility.image && favorite.facility.image.url %></th>
-
-    </tr>
-    <tr>
-      <td><strong>投稿者</strong></td>
-      <td><%= favorite.facility.user.name=%></td>
-    </tr>
-    <tr>
-      <td><strong>施設名</strong></td>
-      <td><%= favorite.facility.title %></td>
-      <td><%= link_to '詳細へ', facility_path(favorite.facility.id), class:"btn btn-info btn-sm"%></td>
-    </tr>
-    <tr>
-      <td><strong>タイプ</strong></td>
-      <td><%= favorite.facility.types %></td>
-    </tr>
-    <tr>
-      <td><strong>都道府県</strong></td>
-      <td><%= favorite.facility.prefecture %></td>
-    </tr>
-    <tr>
-      <td><strong>住所</strong></td>
-      <td><%= favorite.facility.address %></td>
-    </tr>
-    <tr>
-      <td><strong>レビュー</strong></td>
-      <td><%= favorite.facility.content %></td>
-    </tr>
-  </table>
-<%end%>
+<% if @favorites.present? %>
+  <% @favorites.each do |favorite| %>
+    <table class="post_facility" style = "width:60%">
+      <tr>
+        <% if favorite.facility.image? %>
+          <th rowspan="7"><%= image_tag (favorite.facility.image.url),class:'index_img' if favorite.facility.image && favorite.facility.image.url %></th>
+        <% else %>
+          <th rowspan="7"><%= image_tag "noimagefuukei.png", class:"facility_index_icon" %>
+        <% end %>
+      </tr>
+      <tr>
+        <td><strong>投稿者</strong></td>
+        <td><%= favorite.facility.user.name=%></td>
+      </tr>
+      <tr>
+        <td><strong>施設名</strong></td>
+        <td><%= favorite.facility.title %></td>
+        <td><%= link_to '詳細へ', facility_path(favorite.facility.id), class:"btn btn-info btn-sm"%></td>
+      </tr>
+      <tr>
+        <td><strong>タイプ</strong></td>
+        <td><%= favorite.facility.types %></td>
+      </tr>
+      <tr>
+        <td><strong>都道府県</strong></td>
+        <td><%= favorite.facility.prefecture %></td>
+      </tr>
+      <tr>
+        <td><strong>住所</strong></td>
+        <td><%= favorite.facility.address %></td>
+      </tr>
+      <tr>
+        <td><strong>レビュー</strong></td>
+        <td><%= favorite.facility.content %></td>
+      </tr>
+    </table>
+  <%end%>
+<% else %>
+  <br>
+  <br>
+  <h3>お気に入り登録している投稿はありません</h3>
+  <br>
+  <br>
+  <p><%= link_to "一覧へ戻る", facilities_path, class:'btn btn-info'%></p>
+<% end %>
