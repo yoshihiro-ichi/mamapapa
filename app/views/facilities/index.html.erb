@@ -16,7 +16,11 @@
     <table class="post_facility" >
         <tr>
           <% if facility.image? %>
-          <th rowspan="7"><%= image_tag (facility.image.url),class:'index_img' if facility.image && facility.image.url %></th>
+            <th rowspan="7">
+              <%=  link_to facility.image.url, 'data-lightbox': facility.image do %>
+                <%= image_tag (facility.image.url),class:'index_img' if facility.image && facility.image.url %>
+              <% end %>
+            </th>
           <% else %>
             <th rowspan="7"><%= image_tag "noimagefuukei.png", class:"facility_index_icon" %>
           <% end %>
