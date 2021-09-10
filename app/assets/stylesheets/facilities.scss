@@ -14,6 +14,7 @@ div.contents{
   width: 80%;
   margin-left: 10%;
   margin-right: 10%;
+  padding-top: 10px;
   overflow-y: scroll;
 }
 
@@ -26,6 +27,13 @@ table.post_facility{
   margin-bottom: 10px;
   width: 90%;
 }
+
+table.post_facility:hover{
+  box-shadow: 10px 10px 10px rgba(0,0,0,0.5);
+  transition-duration: 1s;
+  // transform: rotateX(360deg);
+}
+
 
 table.post_facility th{
   text-align: center;
@@ -155,5 +163,6 @@ input.post_subumit{
 #map{
   height: 350px;
   width:500px;
-  margin-left: 35%
+  margin-left: auto;
+  margin-right: auto;
 }

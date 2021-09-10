@@ -17,5 +17,6 @@ class Facility < ApplicationRecord
                     '福岡県','佐賀県','長崎県','熊本県','大分県','宮崎県','鹿児島県','沖縄県']
   validates :prefecture, inclusion: { in: presence_values, message: "%{value}欄にない値、空欄は無効です" }
   geocoded_by :address
-  after_validation :geocode, if: :address_changed?
+  geocoded_by :title
+  after_validation :geocode, if: :address_changed?,if: :title_changed?
 end

@@ -23,6 +23,10 @@
         <strong>住所</strong>
         <%= @facility.address  %>
       </p>
+      <p>
+        <strong> レビュー</strong>
+        <%= @facility.content %>
+      </p>
       <p id="map"> </p>
         <script type="text/javascript">
           function initMap() {
@@ -36,7 +40,7 @@
               transitLayer.setMap(map);
 
               var contentString = '住所：<%= @facility.address %>';
-              var contentString = '施設名：<%= @facility.address %>';
+              var contentString = '施設名：<%= @facility.title %>';
               var infowindow = new google.maps.InfoWindow({
                   content: contentString
               });
@@ -55,13 +59,7 @@
       <script async defer
         src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=<%= ENV['GOOGLE_MAP_API_KEY'] %>&callback=initMap">
       </script>
-
-
-
-      <p>
-        <strong> レビュー</strong>
-        <%= @facility.content %>
-      </p>
+      <strong>コメント欄</strong>
       <div id="comments_area">
         <%= render partial: 'comments/index', locals: { comments: @comments, facility: @facility } %>
       </div>

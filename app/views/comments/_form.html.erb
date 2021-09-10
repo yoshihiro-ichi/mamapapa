@@ -1,7 +1,10 @@
+<div id="comments-error">
+ <%= render 'comments/error_messages', model: @comment %>
+</div>
 <%= form_with(model: [facility, comment]) do |form| %>
   <div class="field">
     <%= form.label :content %>
-    <%= form.text_area :content %>
+    <%= form.text_area :content,class: 'form-control'   %>
   </div>
   <div class="actions">
     <%= form.submit %>
