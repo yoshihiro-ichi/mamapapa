@@ -1,59 +1,64 @@
 <h1>施設詳細</h1>
   <div class="show_contets">
-        <p>
-        <%= image_tag (@facility.image.url), class:"facility-show-img"if @facility.image && @facility.image.url %>
-      </p>
-      <p>
-        <strong>投稿者</strong>
-        <%=link_to "#{@facility.user.name}", user_path(@facility.user.id) %>
-      </p>
-      <p>
-        <strong>施設名</strong>
-        <%= @facility.title %>
-      </p>
-      <p>
-        <strong> タイプ</strong>
-        <%= @facility.types %>
-      </p>
-      <p>
-        <strong>都道府県</strong>
-        <%= @facility.prefecture  %>
-      </p>
-      <p>
-        <strong>住所</strong>
-        <%= @facility.address  %>
-      </p>
-      <p>
-        <strong> レビュー</strong>
-        <%= @facility.content %>
-      </p>
-      <p id="map"> </p>
-        <script type="text/javascript">
-          function initMap() {
+    <p>
+      <%= image_tag (@facility.image.url), class:"facility-show-img"if @facility.image && @facility.image.url %>
+    </p>
+    <p>
+      <strong>投稿者</strong>
+      <%=link_to "#{@facility.user.name}", user_path(@facility.user.id) %>
+    </p>
+    <p>
+      <strong>施設名</strong>
+      <%= @facility.title %>
+    </p>
+    <p>
+      <strong> タイプ</strong>
+      <%= @facility.types %>
+    </p>
+    <p>
+      <strong>都道府県</strong>
+      <%= @facility.prefecture  %>
+    </p>
+    <p>
+      <strong>住所</strong>
+      <%= @facility.address  %>
+    </p>
+    <p>
+      <strong> レビュー</strong>
+      <%= @facility.content %>
+    </p>
+    <strong>地図</strong>
+    <% if @facility.latitude.present? %>
+      <p id="map"><strong></strong></p>
+    <% else %>
+      <p>地図を表示できません。詳細な住所を入れてください</p>
+    <% end %>
+      <script type="text/javascript">
+        function initMap() {
 
-              var test ={lat: <%= @facility.latitude %>, lng: <%= @facility.longitude %>};
-              var map = new google.maps.Map(document.getElementById('map'), {
-                  zoom: 15,
-                  center: test
-              });
-              var transitLayer = new google.maps.TransitLayer();
+          var test ={lat: <%= @facility.latitude %>, lng: <%= @facility.longitude %>};
+          var map = new google.maps.Map(document.getElementById('map'), {
+              zoom: 15,
+              center: test
+            });
+          var transitLayer = new google.maps.TransitLayer();
               transitLayer.setMap(map);
 
-              var contentString = '住所：<%= @facility.address %>';
-              var contentString = '施設名：<%= @facility.title %>';
-              var infowindow = new google.maps.InfoWindow({
-                  content: contentString
+          var contentString = '住所：<%= @facility.address %>';
+          var contentString = '施設名：<%= @facility.title %>';
+          var infowindow = new google.maps.InfoWindow({
+              content: contentString
               });
 
-              var marker = new google.maps.Marker({
-                  position:test,
-                  map: map,
-                  title: contentString
+          var marker = new google.maps.Marker({
+              position:test,
+              map: map,
+              title: contentString
               });
 
-              marker.addListener('click', function() {
-                  infowindow.open(map, marker);
-              });
+          marker.addListener('click', function() {
+            infowindow.open(map, marker);
+            });
           }
       </script>
       <script async defer

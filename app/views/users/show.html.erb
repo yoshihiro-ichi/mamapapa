@@ -28,7 +28,7 @@
   <div class="contents">
 
       <% @facilities.each do |facility|%>
-        <table class="post_facility" style = "width:60%">
+        <table class="post_facility" style = "width:80%">
           <tr>
             <th rowspan="7"><%= image_tag (facility.image.url(:thumb).to_s)if facility.image && facility.image.url %></th>
           </tr>
@@ -51,6 +51,9 @@
           <tr>
             <td><strong>都道府県</strong></td>
             <td><%= facility.prefecture %></td>
+            <% if facility.user_id == current_user.id %>
+            <td><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success btn-sm"%></td>
+            <% end %>
           </tr>
           <tr>
             <td><strong>住所</strong></td>
@@ -59,9 +62,6 @@
           <tr>
             <td><strong>レビュー</strong></td>
             <td><%= facility.content %></td>
-            <% if facility.user_id == current_user.id %>
-            <td><%= link_to '編集へ', edit_facility_path(facility.id),class:"btn btn-success btn-sm"%></td>
-            <% end %>
           </tr>
       </table>
     <% end %>

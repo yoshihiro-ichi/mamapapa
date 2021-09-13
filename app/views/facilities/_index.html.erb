@@ -1,8 +1,8 @@
-
-    <table class="post_facility" >
-        <tr>
+<% @facilities.each do |facility|%>
+  <table class="post_facility" >
+      <tr>
           <% if facility.image? %>
-            <%=  link_to @facility.image.url, 'data-lightbox': @facility.image do %>
+            <%=  link_to facility.image.url, 'data-lightbox': @facility.image do %>
               <th rowspan="7"><%= image_tag (facility.image.url),class:'index_img' if facility.image && facility.image.url %></th>
             <% end %>
           <% else %>
@@ -40,3 +40,4 @@
         <td class="contents"><%= facility.content %></td>
       </tr>
     </table>
+<% end %>
