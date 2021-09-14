@@ -8,12 +8,12 @@
 //     }
 div.contents{
   background-color: #ffffff;
-  height: 500px;
+  height: 1000px;
   border: 4px solid #82636b;
   border-radius: 15px;
   width: 80%;
-  margin-left: 10%;
-  margin-right: 10%;
+  margin-left: auto;
+  margin-right: auto;
   padding-top: 10px;
   overflow-y: scroll;
 }
@@ -54,9 +54,9 @@ input[type=file]{
 }
 
 .user_show_icon{
-  width: 300px;
-  height: 300px;
-  border-radius: 300px;
+  width: 200px;
+  height: 200px;
+  border-radius: 200px;
   object-fit:cover;
 }
 
