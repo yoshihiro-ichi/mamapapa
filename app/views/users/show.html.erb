@@ -7,20 +7,19 @@
     <p class="img-circle"><%= image_tag(@user.image.url, class:"user_show_icon") if @user.image && @user.image.url %></p>
     <% else %>
      <%= image_tag "noimagehito.png", class:"user_show_icon"%>
-     <% end %>
-    <% if  current_user.id ==  params[:id].to_i%>
-    <p><%= link_to 'プロフィール編集', edit_user_path(@user.id) , class: 'btn btn-primary'%></p>
     <% end %>
-    <p><%= link_to 'お気に入り一覧へ',  favorites_path,class:"btn btn-info" %></p>
-    <% unless @user == current_user %>
-      <%= render 'follow_form', user:@user %>
-      <%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post %>
-    <% end %>
-    <%= link_to "フォロー:#{@user.following.count}", following_user_path(@user) %>
-    <%= link_to "フォロワー:#{@user.followers.count}", followers_user_path(@user) %>
-      <div class="item">
-
-     </div>
+    <div class="user-nav">
+      <% if  current_user.id ==  params[:id].to_i%>
+        <p><%= link_to 'プロフィール編集', edit_user_path(@user.id) , class: 'btn btn-primary'%></p>
+      <% end %>
+      <p><%= link_to 'お気に入り一覧へ',  favorites_path,class:"btn btn-info" %></p>
+      <% unless @user == current_user %>
+       <p><%= render 'follow_form', user:@user %></p>
+        <p><%= link_to 'メッセージ', conversations_path(sender_id: current_user.id, recipient_id: @user.id), method: :post %></p>
+        <% end %>
+        <p><%= link_to "フォロー:#{@user.following.count}", following_user_path(@user) %></p>
+        <p><%= link_to "フォロワー:#{@user.followers.count}", followers_user_path(@user) %></p>
+    </div>
 <% if @facilities.blank? %>
   <p>↓↓下記に投稿が表示されます↓↓</p>
 <% else %>
