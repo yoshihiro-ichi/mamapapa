@@ -16,7 +16,16 @@
   <div class="container">
     <header>
       <%= link_to top_index_path, class:"link" do %>
-        <h1 class="text-center" calss="title" style= "font-family:Homemade Apple,cursive;">MamaPama</h1>
+        <h1 class="text-center" calss="title" style= "font-family:Homemade Apple,cursive;">
+          <span>M</span>
+          <span>a</span>
+          <span>m</span>
+          <span>a</span>
+          <span>P</span>
+          <span>a</span>
+          <span>p</span>
+          <span>a</span>
+        </h1>
       <% end%>
       <% if user_signed_in? %>
         <%= link_to "HOME", facilities_path,class: "link" %>
