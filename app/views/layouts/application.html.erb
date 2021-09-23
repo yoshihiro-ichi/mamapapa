@@ -4,6 +4,7 @@
   <%= csrf_meta_tags %>
   <%= csp_meta_tag %>
   <title>MamaPapa</title>
+  <meta name="viewport" content="width=devise-width, initial-scale=1.0" />
   <link href="https://fonts.googleapis.com/css?family=Homemade+Apple rel="stylesheet">
   <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
@@ -15,7 +16,16 @@
   <div class="container">
     <header>
       <%= link_to top_index_path, class:"link" do %>
-        <h1 class="text-center" calss="title" style= "font-family:Homemade Apple,cursive;">MamaPama</h1>
+        <h1 class="text-center" calss="title" style= "font-family:Homemade Apple,cursive;">
+          <span>M</span>
+          <span>a</span>
+          <span>m</span>
+          <span>a</span>
+          <span>P</span>
+          <span>a</span>
+          <span>p</span>
+          <span>a</span>
+        </h1>
       <% end%>
       <% if user_signed_in? %>
         <%= link_to "HOME", facilities_path,class: "link" %>
