@@ -12,12 +12,18 @@
 # 開発言語
 - Ruby 2.6.6
 - Rails 5.2.5
-# 就業Termの技術
+# 機能一覧
+- ログイン機能
+- 施設情報投稿機能（CURD）
+- 投稿へのコメント機能(Ajax)
+- 個別メッセージ機能
+- googlemap表示機能
+- フォロー機能
 - お気に入り機能
-- devise
+<!-- # 使用gem一覧
+- -->
+ 
 
-# カリキュラム外の技術
-- ransack
 # 実行手段
 ```
 $ git clone https://github.com/yoshihiro-ichi/mamapapa.git  
