@@ -22,9 +22,7 @@
 - お気に入り機能
 <!-- # 使用gem一覧
 - -->
- 
-
-# 実行手段
+ # 実行手段
 ```
 $ git clone https://github.com/yoshihiro-ichi/mamapapa.git  
 $ cd mamapapa  
