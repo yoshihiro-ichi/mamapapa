@@ -24,5 +24,7 @@ $(function() {
 	    arrows: true,          //左右の矢印
 	    infinite: true,　　　　//スライドのループ
 	    pauseOnHover: false,   //ホバーしたときにスライドを一時停止しない　
+      centerMode: true,
+      centerPadding: '30%',
     });
 });
