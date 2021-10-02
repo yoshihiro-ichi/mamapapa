@@ -2,11 +2,15 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 .top_content {
-  background-image: image-url('pastel_00026.jpg');
-  height: 800px;
-  background-size: cover;
+  // background-image: image-url('pastel_00026.jpg');
+  height: auto;
+  // background-size: cover;
   color:#000000;
+  background-image: image-url('pastel_00026.jpg');
+  background-size: cover;
 }
+
+
 .top_content h2{
 margin-top:0px;
 padding-top: 30px
@@ -15,6 +19,21 @@ padding-top: 30px
 font-family: ヒラギノ角ゴシック;
 }
 
+.contents2{
+ height: auto ;
+ margin-left: auto;
+ margin-right: auto;
+ font-size: 2rem;
+ padding-top: 30px;
+ // background-color: #f5f5f5;
+}
+img.contents_img{
+  margin-left: auto;
+  margin-right: auto;
+  width: 60%;
+  height:auto;
+  object-fit:cover;
+}
 p{
 font-size: 2rem
 }

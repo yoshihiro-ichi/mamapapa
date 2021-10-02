@@ -12,6 +12,8 @@
 *= require bootstrap/dist/css/bootstrap.min
 *= require_tree .
 *= require_self
+@import "slick-theme";
+@import "slick";
 */
 @media screen and (min-width:1000px){
   font-size: 10px;
