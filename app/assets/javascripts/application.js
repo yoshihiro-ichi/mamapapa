@@ -16,7 +16,8 @@
 //= require bootstrap/dist/js/bootstrap.min
 
 //= require_tree .
-$(function() {
+document.addEventListener("turbolinks:load", function() {
+  $(function() {
     $('.contents2').slick({
       autoplay: true,         //自動再生
 	    autoplaySpeed: 2000,　  //自動再生のスピード
@@ -28,4 +29,5 @@ $(function() {
       centerMode: true,
       centerPadding: '30%',
     });
-});
+  });
+})
