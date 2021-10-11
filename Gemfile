@@ -49,3 +49,4 @@ end
   gem 'kaminari'
   gem 'geocoder'
   gem 'dotenv-rails'
+  gem 'fog-aws'
