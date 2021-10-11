@@ -24,3 +24,4 @@ CarrierWave.configure do |config|
       config.fog_directory = 'mamapapa-pro3'
       config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/テスト環境用のバケット名'
   end
+end
