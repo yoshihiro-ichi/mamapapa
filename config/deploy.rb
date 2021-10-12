@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.16.0'
 # デプロイするアプリケーション名
-set :application, 'achieve'
+set :application, 'mamapapa'
 # cloneするgitのレポジトリ
 # （xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
 set :repo_url, 'https://github.com/yoshihiro-ichi/mamapapa.git'
@@ -16,7 +16,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 set :keep_releases, 5
 # Rubyのバージョン
 set :rbenv_ruby, '2.6.6'
-set :rbenv_type, :system
+set :rbenv_type, :debug
 # 出力するログのレベル。エラーログを詳細に見たい場合は :debug に設定する。
 # 本番環境用のものであれば、 :info程度が普通。
 # ただし挙動をしっかり確認したいのであれば :debug に設定する。
