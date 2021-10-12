@@ -15,6 +15,7 @@ set :linked_dirs, %w{log tmp/pids tmp/cache tmp/sockets public/uploads}
 # 保持するバージョンの個数(※後述)
 set :keep_releases, 5
 # Rubyのバージョン
+set :rbenv_type, :user
 set :rbenv_ruby, '2.6.6'
 set :rbenv_type, :debug
 set :rbenv_custom_path, '/root/.rbenv'
