@@ -56,5 +56,5 @@ end
   gem 'ransack', github: 'activerecord-hackery/ransack'
   gem 'kaminari'
   gem 'geocoder'
-  gem 'dotenv-rails'
+  # gem 'dotenv-rails'
   gem 'fog-aws'
