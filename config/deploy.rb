@@ -1,7 +1,7 @@
 # config valid only for current version of Capistrano
 lock '3.16.0'
 # デプロイするアプリケーション名
-set :application, 'mamapapa'
+set :application, 'achieve'
 # cloneするgitのレポジトリ
 # （xxxxxxxx：ユーザ名、yyyyyyyy：アプリケーション名）
 set :repo_url, 'https://github.com/yoshihiro-ichi/mamapapa.git'
